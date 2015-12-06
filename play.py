@@ -378,7 +378,6 @@ if path == "r" or path == "R":
     rendscreen("You walk farther.")
     input()
     rendscreen("You come up to... a DRAGON!")
-    time.sleep(1)
     print("                                        *$$$$$$eeee")
     print("                                          ***$$$$$$$$e")
     print("                                                **$$$$$e")
@@ -472,6 +471,290 @@ if path == "r" or path == "R":
     damagem=damagem*2
     special.append("Sword")
     input()
-else:
-    #Stuff for left path here.
-    rendscreen("You go on the left path.")
+    rendscreen("The path ends there, however.  You walk back.")
+    input()
+exitarena=0
+rendscreen("You go on the left path.")
+input()
+rendscreen("You walk up to an arena.  There are five mosters.  Here are the arena rules:")
+print("You must defeat all 5 enemies.")
+print("To enter, you must pay 20 gold.")
+input()
+enterarena1=0
+while enterarena1!="y" or enterarena1!="Y" or enterarena1!="n" or enterarena1!="N":
+    rendscreen("Do you want to enter? Y/N")
+    enterarena1=input()
+if enterarena1=="y" or enterarena1=="Y":
+    rendscreen("You choose to enter the arena.")
+    input()
+    gold+=-20
+    rendscreen("Moster 1: health: 500")
+    health=healthm*1000+ebhealth
+    enemyh=500
+    while enemyh>0:
+        rendscreenf()
+        fmove="0"
+        if "Bomb" in special:
+            while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
+                fmove=input("K to kick or P to punch or B to use bomb(bombs only do 1000 damage in this battle)")
+        else:
+            while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
+                fmove=input("K to kick or P to punch")
+        if fmove=="k" or fmove=="K":
+            sub=math.floor(random.random()*10)+13
+            enemyh+=-sub*damagem*10
+            print("Damage dealt: "+ str(sub*damagem*10))
+            input()
+        elif fmove=="adminpass":
+            enemyh=0
+            input()
+        elif fmove=="l":
+            health=-1
+            input()
+        elif fmove=="B" or fmove=="b":
+            special.remove("Bomb")
+            enemyh=-1
+            input()
+        else:
+            sub=math.floor(random.random()*10)
+            enemyh+=-sub*3.1*damagem*10
+            print("Damage dealt: "+ str(sub*3.1*damagem*10))
+            input()
+        rendscreenf()
+        if enemyh>0:
+            sub=math.floor(random.random()*100)
+            health+=-40
+            print("Monster attacks!  Damage dealt: "+ str(sub+40))
+            input()
+        if health<0:
+            youlose=0
+            print("You lost!  You can pay 300 gold to try this arena again(A), or you can just lose(L).")
+            while youlose!="A" or youlose!="a" or youlose!="L" or youlose!="l":
+                youlose=input()
+            if youlose=="A" or youlose=="a":
+                gold+=-300
+                health=healthm*1000+ebhealth
+            else:
+                enemyh=-1
+                exitarena=1
+    if exitarena!=1:
+        rendscreen("You beat enemy one!")
+        input()
+        rendscreen("Enemy 2: health: 1000")
+        health=healthm*1000+ebhealth
+        enemyh=1000
+        while enemyh>0:
+            rendscreenf()
+            fmove="0"
+            if "Bomb" in special:
+                while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
+                    fmove=input("K to kick or P to punch or B to use bomb(bombs only do 1000 damage in this battle)")
+            else:
+                while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
+                    fmove=input("K to kick or P to punch")
+                if fmove=="k" or fmove=="K":
+                sub=math.floor(random.random()*10)+13
+                enemyh+=-sub*damagem*10
+                print("Damage dealt: "+ str(sub*damagem*10))
+                input()
+            elif fmove=="adminpass":
+                enemyh=0
+                input()
+            elif fmove=="l":
+                health=-1
+                input()
+            elif fmove=="B" or fmove=="b":
+                special.remove("Bomb")
+                enemyh=-1
+                input()
+            else:
+                sub=math.floor(random.random()*10)
+                enemyh+=-sub*3.1*damagem*10
+                print("Damage dealt: "+ str(sub*3.1*damagem*10))
+                input()
+            rendscreenf()
+            if enemyh>0:
+                sub=math.floor(random.random()*100)
+                health+=-40
+                print("Monster attacks!  Damage dealt: "+ str(sub+40))
+                input()
+            if health<0:
+                youlose=0
+                print("You lost!  You can pay 300 gold to try this arena again(A), or you can just lose(L).")
+                while youlose!="A" or youlose!="a" or youlose!="L" or youlose!="l":
+                    youlose=input()
+                if youlose=="A" or youlose=="a":
+                    gold+=-300
+                    health=healthm*1000+ebhealth
+                else:
+                    enemyh=-1
+                    exitarena=1
+            if exitarena!=1:
+                rendscreen("You beat enemy 2!")
+                input()
+                rendscreen("Enemy 3: health: 1250")
+                health=healthm*1000+ebhealth
+                enemyh=1250
+                while enemyh>0:
+                    rendscreenf()
+                    fmove="0"
+                    if "Bomb" in special:
+                        while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
+                            fmove=input("K to kick or P to punch or B to use bomb(bombs only do 1000 damage in this battle)")
+                    else:
+                        while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
+                            fmove=input("K to kick or P to punch")
+                        if fmove=="k" or fmove=="K":
+                        sub=math.floor(random.random()*10)+13
+                        enemyh+=-sub*damagem*10
+                        print("Damage dealt: "+ str(sub*damagem*10))
+                        input()
+                    elif fmove=="adminpass":
+                        enemyh=0
+                        input()
+                    elif fmove=="l":
+                        health=-1
+                        input()
+                    elif fmove=="B" or fmove=="b":
+                        special.remove("Bomb")
+                        enemyh=-1
+                        input()
+                    else:
+                        sub=math.floor(random.random()*10)
+                        enemyh+=-sub*3.1*damagem*10
+                        print("Damage dealt: "+ str(sub*3.1*damagem*10))
+                        input()
+                    rendscreenf()
+                    if enemyh>0:
+                        sub=math.floor(random.random()*100)
+                        health+=-40
+                        print("Monster attacks!  Damage dealt: "+ str(sub+40))
+                        input()
+                    if health<0:
+                        youlose=0
+                        print("You lost!  You can pay 300 gold to try this arena again(A), or you can just lose(L).")
+                        while youlose!="A" or youlose!="a" or youlose!="L" or youlose!="l":
+                            youlose=input()
+                        if youlose=="A" or youlose=="a":
+                            gold+=-300
+                            health=healthm*1000+ebhealth
+                        else:
+                            enemyh=-1
+                            exitarena=1
+                if exitarena!=1:
+                    rendscreen("You beat enemy 3!")
+                    input()
+                    rendscreen("Enemy 4: health: 1500")
+                    health=healthm*1000+ebhealth
+                    enemyh=1500
+                    while enemyh>0:
+                        rendscreenf()
+                        fmove="0"
+                        if "Bomb" in special:
+                            while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
+                                fmove=input("K to kick or P to punch or B to use bomb(bombs only do 1000 damage in this battle)")
+                        else:
+                            while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
+                                fmove=input("K to kick or P to punch")
+                            if fmove=="k" or fmove=="K":
+                            sub=math.floor(random.random()*10)+13
+                            enemyh+=-sub*damagem*10
+                            print("Damage dealt: "+ str(sub*damagem*10))
+                            input()
+                            elif fmove=="adminpass":
+                            enemyh=0
+                            input()
+                        elif fmove=="l":
+                            health=-1
+                            input()
+                        elif fmove=="B" or fmove=="b":
+                            special.remove("Bomb")
+                            enemyh=-1
+                            input()
+                        else:
+                            sub=math.floor(random.random()*10)
+                            enemyh+=-sub*3.1*damagem*10
+                            print("Damage dealt: "+ str(sub*3.1*damagem*10))
+                            input()
+                        rendscreenf()
+                        if enemyh>0:
+                            sub=math.floor(random.random()*100)
+                            health+=-40
+                            print("Monster attacks!  Damage dealt: "+ str(sub+40))
+                            input()
+                        if health<0:
+                            youlose=0
+                            print("You lost!  You can pay 300 gold to try this arena again(A), or you can just lose(L).")
+                            while youlose!="A" or youlose!="a" or youlose!="L" or youlose!="l":
+                                youlose=input()
+                            if youlose=="A" or youlose=="a":
+                                gold+=-300
+                                health=healthm*1000+ebhealth
+                            else:
+                                enemyh=-1
+                                exitarena=1
+                    if exitarena!=1:
+                        rendscreen("You beat enemy 4")
+                        input("Final enemy: health: secret")
+                        health=healthm*1000+ebhealth
+                        enemyhs=2000
+                        enemyh="Secret"
+                        while enemyhs>0:
+                            rendscreenf()
+                            fmove="0"
+                            if "Bomb" in special:
+                                while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
+                                    fmove=input("K to kick or P to punch or B to use bomb(bombs only do 1000 damage in this battle)")
+                            else:
+                                while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
+                                    fmove=input("K to kick or P to punch")
+                                if fmove=="k" or fmove=="K":
+                                sub=math.floor(random.random()*10)+13
+                                enemyhs+=-sub*damagem*10
+                                print("Damage dealt: "+ str(sub*damagem*10))
+                                input()
+                            elif fmove=="adminpass":
+                                enemyhs=0
+                                input()
+                            elif fmove=="l":
+                                health=-1
+                                input()
+                            elif fmove=="B" or fmove=="b":
+                                special.remove("Bomb")
+                                enemyhs=enemyhs-500
+                                input()
+                            else:
+                                sub=math.floor(random.random()*10)
+                                enemyhs+=-sub*3.1*damagem*10
+                                print("Damage dealt: "+ str(sub*3.1*damagem*10))
+                                input()
+                            rendscreenf()
+                            if enemyhs>0:
+                                sub=math.floor(random.random()*100)
+                                health+=-40
+                                print("Monster attacks!  Damage dealt: "+ str(sub+40))
+                                input()
+                            if health<0:
+                                youlose=0
+                                print("You lost!  You can pay 300 gold to try this arena again(A), or you can just lose(L).")
+                                while youlose!="A" or youlose!="a" or youlose!="L" or youlose!="l":
+                                    youlose=input()
+                                if youlose=="A" or youlose=="a":
+                                    gold+=-300
+                                    health=healthm*1000+ebhealth
+                                else:
+                                    enemyhs=-1
+                                    exitarena=1
+                        if exitarena!=1:
+                            rendscreen("You beat all the enemies!")
+                            input()
+if enterarena1==1 and exitarena==0:
+    rendscreen("Prizes:")
+    input()
+    rendscreen("100 gold")
+    gold+=100
+    input()
+    rendscreen("5 bombs")
+    special.append("Bomb")
+    special.append("Bomb")
+    special.append("Bomb")
