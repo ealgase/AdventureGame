@@ -151,23 +151,23 @@ else:
             fmove=input("K to kick or P to punch")
         if fmove=="K" or fmove=="k":
             sub=math.floor(random.random()*10)+6
-            enemyh=enemyh-sub
-            print("Damage dealt: "+ str(sub))
+            enemyh=enemyh-sub*10
+            print("Damage dealt: "+ str(sub*10))
             input()
         elif fmove=="adminpass":
             enemyh=0
         else:
             sub=math.floor(random.random()*10)
-            enemyh+=-sub*1.85
-            print("Damage dealt: "+ str(sub*1.85))
+            enemyh+=-sub*1.85*10
+            print("Damage dealt: "+ str(sub*1.85*10))
             input()
         rendscreenf()
         time.sleep(.2)
         if enemyh>0:
-            sub=math.floor(random.random()*10)*1.4
+            sub=math.floor(random.random()*10)*1.4*10
             health+=-sub
-            health+=-4
-            print("Bear attacks! Damage dealt: "+ str(sub+4))
+            health+=-4*10
+            print("Bear attacks! Damage dealt: "+ str(sub+4*10))
             input()
         if health<0:
             lives+=-1
@@ -245,8 +245,8 @@ if giantf=="1":
             fmove=input("K to kick or P to punch")
         if fmove=="k" or fmove=="K":
             sub=math.floor(random.random()*10)+6
-            enemyh+=-sub
-            print("Damage dealt: "+ str(sub))
+            enemyh+=-sub*10
+            print("Damage dealt: "+ str(sub*10))
             input()
         elif fmove=="adminpass":
             enemyh=0
@@ -254,15 +254,15 @@ if giantf=="1":
             health=-1
         else:
             sub=math.floor(random.random()*10)
-            enemyh+=-sub*1.9
-            print("Damage dealt: "+ str(sub*1.9))
+            enemyh+=-sub*1.9*10
+            print("Damage dealt: "+ str(sub*1.9*10))
             input()
         rendscreenf()
         if enemyh>0:
             sub=math.floor(random.random()*10)*1.5
-            health+=-sub
-            health +=-6
-            print("Giant attacks!  Damage dealt: "+ str(sub+6))
+            health+=-sub*10
+            health+=-6*10
+            print("Giant attacks!  Damage dealt: "+ str(sub+6*10))
             input()
         if health<0:
             lives+=-1
@@ -324,8 +324,8 @@ if giantf=="1":
                 fmove=input("K to kick or P to punch")
         if fmove=="k" or fmove=="K":
             sub=math.floor(random.random()*10)+6
-            enemyh+=-sub*damagem
-            print("Damage dealt: "+ str(sub*damagem))
+            enemyh+=-sub*damagem*10
+            print("Damage dealt: "+ str(sub*damagem*10))
             input()
         elif fmove=="adminpass":
             enemyh=0
@@ -336,15 +336,15 @@ if giantf=="1":
             enemyh=0
         else:
             sub=math.floor(random.random()*10)
-            enemyh+=-sub*1.9*damagem
-            print("Damage dealt: "+ str(sub*1.9*damagem))
+            enemyh+=-sub*1.9*damagem*10
+            print("Damage dealt: "+ str(sub*1.9*damagem*10))
             input()
         rendscreenf()
         if enemyh>0:
             sub=math.floor(random.random()*10)*1.5
-            health+=-sub
-            health +=-6
-            print("Dragon attacks!  Damage dealt: "+ str(sub+6))
+            health+=-sub*10
+            health +=-6*10
+            print("Dragon attacks!  Damage dealt: "+ str(sub+6*10))
             input()
         if health<0:
             lives+=-1
