@@ -758,3 +758,13 @@ if enterarena1==1 and exitarena==0:
     special.append("Bomb")
     special.append("Bomb")
     special.append("Bomb")
+    special.append("Bomb")
+    special.append("Bomb")
+    input()
+    rendscreen("A staff: double damage and double health in all battles")
+    special.append("Staff")
+    damagem=damagem*2
+    healthm=healthm*2
+    rendscreen("5 lives")
+    lives+=5
+rendscreen("You continue on the path.")
