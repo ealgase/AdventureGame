@@ -2,6 +2,7 @@ lives=5
 gold=10
 damagem=1
 special=[]
+healthm=1
 import time
 import random
 import math
@@ -343,7 +344,7 @@ if giantf=="1":
         if enemyh>0:
             sub=math.floor(random.random()*10)*1.5
             health+=-sub*10
-            health +=-6*10
+            health+=-6*10
             print("Dragon attacks!  Damage dealt: "+ str(sub+6*10))
             input()
         if health<0:
@@ -361,3 +362,116 @@ else:
 rendscreen("You found another bomb on the path!")
 special.append("Bomb")
 input()
+path=0
+while path != "r" and path != "R" and path != "l" and path != "L":
+    rendscreen("The path branches into 2 pathes: left(l) or right(r).  Which one do you take?")
+    path=input()
+if path == "r" or path == "R":
+    #Stuff for right path here.
+    rendscreen("You go on the right path.")
+    input()
+    rendscreen("There's a chest!")
+    input()
+    rendscreen("You open it, and there's 20 gold inside!")
+    gold+=20
+    input()
+    rendscreen("You walk farther.")
+    input()
+    rendscreen("You come up to... a DRAGON!")
+    time.sleep(1)
+    print("                                        *$$$$$$eeee")
+    print("                                          ***$$$$$$$$e")
+    print("                                                **$$$$$e")
+    print("           e$$$e                                   *$$$$$")
+    print("          $$$$                                     e$$$$$")
+    print("         $$$$                                  ee$$$$$$$")
+    print("         $$$$               ee***ee***eeeee$$$$$$$$$$$*")
+    print("         $$$$e        eee$$$     $     $$$$$$$$$$$$$*        ee")
+    print("         *$$$$$$$$$$$$$$$$$$ $$$ $ $$$ $$$$$$$$**      ee****WW$")
+    print(" eeeeee    *$$$$$$$$$$$$$$$$  $$ $  $$ $*****        e*!!!W**!W*")
+    print("$!WWWW!***ee   *************eee$$**eee$             e*!W**!!!!$")
+    print(" $!!!!***WW!**eee        e**!!!!!!!!!!!***e      e**!!W*!!!!!!$")
+    print(" $!!!!!!!!!*W!!!!$      $!!!!W****WWWW!!!!!$     *W!!!*WW!!!!!$")
+    print(" $!!!!!!!!!WW*!!!$      *W!!*W!!!!!!!!*W!!W*     e*!!!!!!*W!!!$")
+    print(" $!!!!!W***!!WW!!*e       ******WWWWW*****       $!!!W***W!**W*")
+    print(" $!!!W*WW****!!*W!!*eee    ee   $!!$   ee     ee*!!W*!!!!!*W!!$")
+    print("  $W*!$!!!!!!!!!!*WW!!!****!W***!!!!***W!*****!!!!$!!!!!!!!*W$")
+    print("  $!W*!!!!!!!!!!!W**!WW!!!!W*!!!!!!!!!!*WW*****W!!$!!!!!!!!!W*")
+    print("   *WW!!!!!!!!!W*!W**!!***W$!!!!W!!!W!!!$!!!!!!$!W*!!!!!!W**")
+    print("      ****WW!W*!W$WWW!!!!!!$!!!!*WWW*!!!$!!!!!!$W$!!!WWWW*")
+    print("            *$W*!!!!!*WW!!!$!!!!!!$!!!!W*!!WW**!!!*$*")
+    print("              $!!!!!!!!!*W!*W!!!!!$!!!!$!W*!!!!!!!!!$")
+    print("              *W!!!!!!!!!!***W!!!!$!!!!$*!!!!!!!!!!!$")
+    print("               $!!!!!!!!!!!!!$!!!!$!!!W*!!!!!!!!!!!$")
+    print("                $!!!!!*W!!!!!$!!!!$!!!$!!!!!W!!!!!$")
+    print("eeeeeeee         $!!!!!!$!!!!$!!!!$!!!$!!!!W*!!!!W*")
+    print("$!!!!W*       ee$W$!!!!!!$!!!$!!!!$!!!$!!!W*!!!!W*")
+    print("$!!!*ee**e**e*WW*!!$!!!!!!$!!$!!!!$!!!$!!!$!!!WW*")
+    print("$!$WW!!*******!!WWW**W*W!!$WW*!!!!$!!!$!W$WW**W!*e")
+    print("$*   **WWWWWW***e*!!$!!$**!W*!!!WW*$!!!*W!!*W!!*W!*e")
+    print("              e*!!!$!!W*!W*!!!!$    $!!!!$!!!$!!!$!*e")
+    print("              *WWW*WW*WWW*WWWW*      *WWW*WWW*WWW*WW*")
+    input()
+    rendscreen("Dragon: I WILL RIP YOU APART WITH MY CLAWS!")
+    input()
+    health=1000+ebhealth
+    enemyh=2500
+    while enemyh>0:
+        rendscreenf()
+        fmove="0"
+        if "Bomb" in special:
+            while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
+                fmove=input("K to kick or P to punch or B to use bomb(bombs only do 1000 damage in this battle)")
+        else:
+            while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
+                fmove=input("K to kick or P to punch")
+        if fmove=="k" or fmove=="K":
+            sub=math.floor(random.random()*10)+13
+            enemyh+=-sub*damagem*10
+            print("Damage dealt: "+ str(sub*damagem*10))
+            input()
+        elif fmove=="adminpass":
+            enemyh=0
+            input()
+        elif fmove=="l":
+            health=-1
+            input()
+        elif fmove=="B" or fmove=="b":
+            special.remove("Bomb")
+            enemyh=enemyh-1000
+            input()
+        else:
+            sub=math.floor(random.random()*10)
+            enemyh+=-sub*3.1*damagem*10
+            print("Damage dealt: "+ str(sub*3.1*damagem*10))
+            input()
+        rendscreenf()
+        if enemyh>0:
+            sub=math.floor(random.random()*20)
+            health+=-sub*10
+            health+=-8*10
+            print("Dragon attacks!  Damage dealt: "+ str(sub+8*10))
+            input()
+        if health<0:
+            lives+=-1
+            health=1000+ebhealth
+            print("You lost a life.")
+            input()
+    rendscreen("You beat the dragon!")
+    input()
+    rendscreen("The dragon was hoarding:")
+    input()
+    rendscreen("200 gold...")
+    gold+=200
+    input()
+    rendscreen("A golden vest... that grants double health in all battles.")
+    healthm=healthm*2
+    special.append("Golden Vest")
+    input()
+    rendscreen("A sword, that grants 2x damage in all battles.")
+    damagem=damagem*2
+    special.append("Sword")
+    input()
+else:
+    #Stuff for left path here.
+    rendscreen("You go on the left path.")
