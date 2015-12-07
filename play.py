@@ -753,7 +753,7 @@ if enterarena1=="y" or enterarena1=="Y":
                             enemyh=-1
                             rendscreen("You beat all the enemies!")
                             input()
-if enterarena1==1 and exitarena==0:
+if enterarena1=="y" or enterarena1=="Y" and exitarena==0:
     rendscreen("Prizes:")
     input()
     rendscreen("100 gold")
