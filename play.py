@@ -747,8 +747,10 @@ if enterarena1=="y" or enterarena1=="Y":
                                     health=healthm*1000+ebhealth
                                 else:
                                     enemyhs=-1
+                                    enemyh=-1
                                     exitarena=1
                         if exitarena!=1:
+                            enemyh=-1
                             rendscreen("You beat all the enemies!")
                             input()
 if enterarena1==1 and exitarena==0:
