@@ -767,9 +767,13 @@ if enterarena1=="y" or enterarena1=="Y" and exitarena==0:
     special.append("Bomb")
     input()
     rendscreen("A staff: double damage and double health in all battles")
+    input()
     special.append("Staff")
     damagem=damagem*2
     healthm=healthm*2
     rendscreen("5 lives")
     lives+=5
+    input()
 rendscreen("You continue on the path.")
+input()
+rendscreen("Now, you've beaten the tutorial.  Keep playing against harder enemies and getting better.")
