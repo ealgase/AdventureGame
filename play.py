@@ -612,7 +612,7 @@ if enterarena1=="y" or enterarena1=="Y":
                         enemyh+=-sub*damagem*10
                         print("Damage dealt: "+ str(sub*damagem*10))
                         input()
-                        elif fmove=="adminpass":
+                    elif fmove=="adminpass":
                         enemyh=0
                         input()
                     elif fmove=="l":
