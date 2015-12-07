@@ -657,25 +657,25 @@ if enterarena1=="y" or enterarena1=="Y":
                             while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
                                 fmove=input("K to kick or P to punch")
                             if fmove=="k" or fmove=="K":
-                            sub=math.floor(random.random()*10)+13
-                            enemyh+=-sub*damagem*10
-                            print("Damage dealt: "+ str(sub*damagem*10))
-                            input()
+                                sub=math.floor(random.random()*10)+13
+                                enemyh+=-sub*damagem*10
+                                print("Damage dealt: "+ str(sub*damagem*10))
+                                input()
                             elif fmove=="adminpass":
-                            enemyh=0
-                            input()
-                        elif fmove=="l":
-                            health=-1
-                            input()
-                        elif fmove=="B" or fmove=="b":
-                            special.remove("Bomb")
-                            enemyh=-1
-                            input()
-                        else:
-                            sub=math.floor(random.random()*10)
-                            enemyh+=-sub*3.1*damagem*10
-                            print("Damage dealt: "+ str(sub*3.1*damagem*10))
-                            input()
+                                enemyh=0
+                                input()
+                            elif fmove=="l":
+                                health=-1
+                                input()
+                            elif fmove=="B" or fmove=="b":
+                                special.remove("Bomb")
+                                enemyh=-1
+                                input()
+                            else:
+                                sub=math.floor(random.random()*10)
+                                enemyh+=-sub*3.1*damagem*10
+                                print("Damage dealt: "+ str(sub*3.1*damagem*10))
+                                input()
                         rendscreenf()
                         if enemyh>0:
                             sub=math.floor(random.random()*100)
