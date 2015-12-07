@@ -481,9 +481,9 @@ print("You must defeat all 5 enemies.")
 print("To enter, you must pay 20 gold.")
 input()
 enterarena1=0
-while enterarena1!="y" or enterarena1!="Y" or enterarena1!="n" or enterarena1!="N":
-    rendscreen("Do you want to enter? Y/N")
-    enterarena1=input()
+rendscreen("Do you want to enter? Y/N")
+while enterarena1!="y" and enterarena1!="Y" and enterarena1!="n" and enterarena1!="N":
+    enterarena1=input("Do you want to enter? Y/N: ")
 if enterarena1=="y" or enterarena1=="Y":
     rendscreen("You choose to enter the arena.")
     input()
