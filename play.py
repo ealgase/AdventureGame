@@ -545,7 +545,7 @@ if enterarena1=="y" or enterarena1=="Y":
         input()
         health=healthm*1000+ebhealth
         enemyh=1000
-        while enemyh>0:
+        while int(enemyh)>0:
             rendscreenf()
             fmove="0"
             if "Bomb" in special:
