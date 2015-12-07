@@ -793,7 +793,8 @@ def rendscreenfx():
     print("Health: "+str(health)+" Enemy Health: "+str(enemyh))
     print("--------------------------------------------------------------------------------")
 while True:
-    move=randint(1,5)
+    move=randint(1,2)
+    #move=randint(1,5)
     if move==1:
         #path
         path=0
@@ -803,7 +804,7 @@ while True:
         if path == "l" or path == "L":
             rendscreenx("You go on the left path.")
             input()
-            lpath=raidint(1,10)
+            lpath=randint(1,10)
             if lpath==1:
                 goldgotten=math.floor(xp/100)
                 rendscreenx("You found a chest with " + goldgotten + " gold!")
@@ -822,7 +823,7 @@ while True:
                 special.append("Bomb")
                 xp+=1
             elif lpath==5:
-                lpath5=raidint(1,3)
+                lpath5=randint(1,3)
                 if lpath5==1:
                     rendscreenx("You found a sword!  It grants double damage in all battles!")
                     special.append("Sword")
@@ -845,4 +846,281 @@ while True:
                 xp+=4
             elif lpath==9:
                 #Random special item!
-                #rsa=raidint
+                #rsa=randint
+                rsa=randint(1,5)
+                if rsa==1:
+                    rendscreenx("You got a bomb!")
+                    special.append("Bomb")
+                elif rsa==2:
+                    rendscreenx("You found a sword!  It gives 2x damage in all battles!")
+                    special.append("Sword")
+                    damagem=damagem*2
+                elif rsa==3:
+                    rsa2=randint(1,100)
+                    if rsa2==1:
+                        rendscreen("You found the epic staff!  It grants x10 health and x10 damage in all battles!")
+                        special.append("Epic Staff")
+                        damagem=damagem*10
+                        healthm=healthm*10
+                    else:
+                        rendscreenx("You got a bomb!")
+                        special.append("Bomb")
+                elif rsa==4:
+                    rendscreenx("You found a cape that grants +500 health in all battles!")
+                    ebhealth+=500
+                    special.append("Cape")
+                elif rsa==5:
+                    rendscreenx("You found a stockpile of bombs...5 of them!")
+                    special.append("Bomb")
+                    special.append("Bomb")
+                    special.append("Bomb")
+                    special.append("Bomb")
+                    special.append("Bomb")
+                xp+=20
+            elif lpath==10:
+                rendscreenx("You fall into a trap and lose a life.")
+                lives+=-1
+                xp=xp+5
+            input()
+        elif path=="r" or path=="R":
+            rpath=randint(1,10)
+            if rpath==1:
+                rendscreenx("You found a chest with " + 100 + " gold!")
+                gold+=100
+                xp+=2
+            elif rpath==2:
+                rendscreenx("You step in quicksand. Lose a life!")
+                lives+=-1
+                xp+=3
+            elif rpath==3:
+                rendscreenx("A massive frog bites you!  Lose a life!")
+                lives+=-1
+                xp+=4
+            elif lpath==4:
+                rendscreenx("You found a bomb!")
+                special.append("Bomb")
+                xp+=1
+            elif rpath==5:
+                rpath5=randint(1,3)
+                if rpath5==1:
+                    rendscreenx("You found a staff!  It grants double health in all battles!")
+                    healthm=healthm*2
+                    special.append("Staff")
+                    xp+=15
+                else:
+                    rendscreenx("You continue on the path.")
+                    xp+=1
+            elif rpath==6:
+                rendscreenx("You got in poison ivy!  You lose a life.")
+                lives+=-1
+                xp+=2
+            elif rpath==7:
+                rendscreenx("You find some water.  You gain 2 lives!")
+                lives+=2
+                xp+=5
+            elif rpath==8:
+                rendscreenx("You find a medkit!  Gain 8 lives.")
+                lives+=8
+                xp+=1
+            elif rpath==9:
+                #Random special item!
+                #rsa=randint
+                rsa=randint(1,5)
+                if rsa==1:
+                    rendscreenx("You got 2 bombs!")
+                    special.append("Bomb")
+                    special.append("Bomb")
+                elif rsa==2:
+                    rendscreenx("You found a sword!  It gives 2x damage in all battles!")
+                    special.append("Sword")
+                    damagem=damagem*2
+                elif rsa==3:
+                    rsa2=randint(1,1000)
+                    if rsa2==1:
+                        rendscreen("You found the epic sword!  It grants x100 health and x100 damage in all battles!")
+                        special.append("Epic Sword")
+                        damagem=damagem*100
+                        healthm=healthm*100
+                        xp+=500
+                    else:
+                        rendscreenx("You got a bomb!")
+                        special.append("Bomb")
+                elif rsa==4:
+                    rendscreenx("You found a cloak that grants +500 health in all battles!")
+                    ebhealth+=500
+                    special.append("Cloak")
+                elif rsa==5:
+                    rendscreenx("You found a stockpile of bombs...10 of them!")
+                    special.append("Bomb")
+                    special.append("Bomb")
+                    special.append("Bomb")
+                    special.append("Bomb")
+                    special.append("Bomb")
+                xp+=20
+            elif rpath==10:
+                rendscreenx("You get sick and lose a life!")
+                lives+=-1
+                xp=xp+5
+            input()
+        else:
+            cpath=randint(1,10)
+            if cpath==1:
+                rendscreenx("You found a book that's pretty good.  However, it does nothing.")
+                book=randint(1,5)
+                if book==1:
+                    special.append("Harry Potter and the Sorcer's Stone")
+                elif book==2:
+                    special.append("The Name of this Book is Secret")
+                elif book==3:
+                    special.append("Surely You’re Joking, Mr. Feynman!")
+                elif book==4:
+                    special.append("Magnus Chase and the Gods of Asgard")
+                elif book==5:
+                    special.append("This book hasn't been written yet.")
+                xp+=30
+            elif cpath==2:
+                berriese=0
+                while berriese!="y" and berriese!="Y" and berriese!="n" and berriese!="N":
+                    rendscreenx("You find some berries.  Do you eat them! Y/N")
+                if berriese=="y" or berriese=="Y":
+                    rendscreenx("They were poisoned! Lose a life!")
+                    lives+=-1
+                    xp+=10
+                else:
+                    rendscreenx("You don't eat the berries.")
+                    xp+=2
+            elif cpath==3:
+                berriese=0
+                while berriese!="y" and berriese!="Y" and berriese!="n" and berriese!="N":
+                    rendscreenx("You find some berries.  Do you eat them! Y/N")
+                if berriese=="y" or berriese=="Y":
+                    rendscreenx("They tasted good! Gain a life!")
+                    lives+=1
+                    xp+=10
+                else:
+                    rendscreenx("You don't eat the berries.")
+                    xp+=2
+            elif cpath==4:
+                berriese=0
+                while berriese!="y" and berriese!="Y" and berriese!="n" and berriese!="N":
+                    rendscreenx("You find some berries.  Do you eat them! Y/N")
+                if berriese=="y" or berriese=="Y":
+                    rendscreenx("You found a bomb under them!")
+                    special.append("Bomb")
+                    xp+=10
+                else:
+                    rendscreenx("You don't eat the berries.")
+                    xp+=2
+            elif cpath==5:
+                rendscreenx("You found a cloak!  It grants +300 health in all battles!")
+                special.append("Cloak")
+                ebhealth+=300
+                xp+=5
+            elif cpath==6:
+                goldf=randint(1,xp)
+                rendscreenx("You found " + goldf + " gold!")
+                gold+=goldf
+                xp+=4
+            elif cpath==7:
+                livel=randint(2,4)
+                rendscreenx("You fell into a snake hole.  The snake bit you!  Lose " + livel + "lives!")
+                lives+=-livel
+                xp+=livel*4
+            elif cpath==8:
+                rendscreenx("You lie down for a nap.")
+                input()
+                rendscreenx("After you wake up, you see a staff ahead...")
+                input()
+                rendscreenx("You go to touch it...")
+                input()
+                rendscreenx("It zaps you! Lose 2 lives!")
+                lives+=-2
+                input()
+                rendscreenx("However, you pick it up, and it's super powerful...")
+                input()
+                rendscreenx("The lightning staff grants 4x attack power!")
+                damagem=damagem*4
+                special.append("Lightning Staff")
+                xp+=40
+            else:
+                rendscreenx("You fall down... lose 3 lives!")
+                lives+=-3
+                xp+=8
+            input()
+    elif move==2:
+        #normal enemy
+        #Types:
+        #Monster: 5 HP per XP, bombs destroy Rewards 30 XP
+        #Dragon: 20 HP per XP, bombs do 500 damage Rewards 60 XP
+        #Bear: 10 HP per XP, bombs destroy Rewards 20 XP
+        #Giant: 30 HP per XP, bombs do 1500 damage Rewards 100 XP
+        type=randint(1,4)
+        if type==1:
+            enemy="monster"
+            enemyh=5*xp
+            bomba="destroy "
+            xpe=30
+            bombm=9999999999999999999999999999
+        elif type==2:
+            enemy="dragon"
+            enemyh=20*xp
+            bomba="do 1000 damage to "
+            xpe=60
+            bombm=1000
+        elif type==3:
+            enemy="bear"
+            enemyh=10*xp
+            bomba="destroy "
+            xpe=20
+            bombm=9999999999999999999999999999
+        elif type==4:
+            enemy="giant"
+            enemyh=30*xp
+            bomba="do 1500 damage to "
+            xpe=100
+            bombm=1500
+        rendscreeenx("You come up to a " + enemy + "!")
+        input()
+        rendscreenx("It wants to fight you!")
+        health=healthm*1000+ebhealth
+        while enemyh>0:
+            rendscreenf()
+            fmove="0"
+            if "Bomb" in special:
+                while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
+                    fmove=input("K to kick or P to punch or B to use bomb(bombs "+bomba+"to the enemy.")
+            else:
+                while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
+                    fmove=input("K to kick or P to punch")
+            if fmove=="k" or fmove=="K":
+                sub=math.floor(random.random()*10)+13
+                enemyh+=-sub*damagem*10
+                print("Damage dealt: "+ str(sub*damagem*10))
+                input()
+            elif fmove=="adminpass":
+                enemyh=0
+                input()
+            elif fmove=="l":
+                health=-1
+                input()
+            elif fmove=="B" or fmove=="b":
+                special.remove("Bomb")
+                enemyh+=-bombm
+                input()
+            else:
+                sub=math.floor(random.random()*10)
+                enemyh+=-sub*3.1*damagem*10
+                print("Damage dealt: "+ str(sub*3.1*damagem*10))
+                input()
+            rendscreenf()
+            if enemyh>0:
+                sub=math.floor(random.random()*100)
+                health+=-40
+                print(enemy + " attacks!  Damage dealt: "+ str(sub+40))
+                input()
+            if health<0:
+                youlose=0
+                print("You lost a life!")
+                lives+=-1
+        rendscreenx("You beat the "+enemy+"!")
+        xp+=xpe
