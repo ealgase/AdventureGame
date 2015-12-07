@@ -777,3 +777,72 @@ if enterarena1=="y" or enterarena1=="Y" and exitarena==0:
 rendscreen("You continue on the path.")
 input()
 rendscreen("Now, you've beaten the tutorial.  Keep playing against harder enemies and getting better.")
+xp=100
+def rendscreenx(text):
+    cls()
+    print("--------------------------------------------------------------------------------")
+    print("Gold: "+ str(gold) + " Lives: " + str(lives) + " XP: "+xp)
+    print("Special items: "+str(special))
+    print("--------------------------------------------------------------------------------")
+    print(text)
+def rendscreenfx():
+    cls()
+    print("--------------------------------------------------------------------------------")
+    print("Gold: "+ str(gold) + " Lives: " + str(lives) + " XP: "+xp)
+    print("Special items: "+str(special))
+    print("Health: "+str(health)+" Enemy Health: "+str(enemyh))
+    print("--------------------------------------------------------------------------------")
+while True:
+    move=randint(1,5)
+    if move==1:
+        #path
+        path=0
+        rendscreenx("The path branches into three directions: left(L), right(R), and straight(S).  Witch one to you take?")
+        while path!="l" and path!="L" and path!="r" and path!="R" and path!="s" and path!="S":
+            path=input()
+        if path == "l" or path == "L":
+            rendscreenx("You go on the left path.")
+            input()
+            lpath=raidint(1,10)
+            if lpath==1:
+                goldgotten=math.floor(xp/100)
+                rendscreenx("You found a chest with " + goldgotten + " gold!")
+                gold+=goldgotten
+                xp+=1
+            elif lpath==2:
+                rendscreenx("You walk into a trap and lose a life.")
+                lives+=-1
+                xp+=2
+            elif lpath==3:
+                rendscreenx("A massive ant bites you!  Lose a life!")
+                lives+=-1
+                xp+=3
+            elif lpath==4:
+                rendscreenx("You found a bomb!")
+                special.append("Bomb")
+                xp+=1
+            elif lpath==5:
+                lpath5=raidint(1,3)
+                if lpath5==1:
+                    rendscreenx("You found a sword!  It grants double damage in all battles!")
+                    special.append("Sword")
+                    damagem=damagem*2
+                    xp+=10
+                else:
+                    rendscreenx("You continue on the path.")
+                    xp+=1
+            elif lpath==6:
+                rendscreenx("You got hit by a sharp leaf!  You lose a life.")
+                lives+=-1
+                xp+=2
+            elif lpath==7:
+                rendscreenx("You find some food.  You gain 4 lives!")
+                lives+=4
+                xp+=3
+            elif lpath==8:
+                rendscreenx("You find a medkit!  Gain 5 lives.")
+                lives+=5
+                xp+=4
+            elif lpath==9:
+                #Random special item!
+                #rsa=raidint
