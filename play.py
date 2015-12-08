@@ -6,6 +6,8 @@ healthm=1
 import time
 import random
 import math
+def randint(n1,n2):
+    random.randint(n1,n2)
 def rendscreen(text):
     cls()
     print("--------------------------------------------------------------------------------")
