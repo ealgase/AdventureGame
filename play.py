@@ -2033,3 +2033,7 @@ while True:
             rendscreenx("You continue on the path.")
             xp+=1
             input()
+#    elif move==5:
+#        rendscreenx("You walk up to a village!")
+#        village=randint(1,20)
+#        if randint==1:
