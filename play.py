@@ -1144,7 +1144,7 @@ while True:
             print("To enter, you must pay " + str(entry) + " gold.")
             input()
             rendscreenx("You enter the arena.")
-            gold+-=20
+            gold+=-20
             rendscreen("You choose to enter the arena.")
             input()
             gold+=-20
