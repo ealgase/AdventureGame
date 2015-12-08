@@ -1391,7 +1391,7 @@ while True:
                                     enemyhs+=-sub*3.1*damagem*10
                                     print("Damage dealt: "+ str(sub*3.1*damagem*10))
                                     input()
-                                        rendscreenf()
+                                    rendscreenf()
                                 if enemyhs>0:
                                     sub=math.floor(random.random()*100)
                                     health+=-40
