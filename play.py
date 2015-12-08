@@ -786,6 +786,7 @@ def rendscreenx(text):
     print("Special items: "+str(special))
     print("--------------------------------------------------------------------------------")
     print(text)
+#gameloop
 while True:
     move=randint(1,4)
     #move=randint(1,5)
@@ -2033,7 +2034,35 @@ while True:
             rendscreenx("You continue on the path.")
             xp+=1
             input()
-#    elif move==5:
-#        rendscreenx("You walk up to a village!")
-#        village=randint(1,20)
-#        if randint==1:
+    elif move==5:
+'''
+        rendscreenx("You walk up to a village!")
+        input()
+        village=randint(1,20)
+        if village==1:
+            #Gods
+            rendscreenx("The villagers praise you as their god.  They give you 50 gold.")
+            gold+=50
+            xp+=10
+        elif village==2:
+            #Gods
+            rendscreenx("The villagers praise you as their god.  They give a sword that grants 2x damage in all battles.")
+            special.append("Sword")
+            damagem=damagem*2
+            xp+=10
+        elif village==3:
+            #Gods
+            rendscreenx("The villagers praise you as their god.  Unfortuatly, they hate their gods.  Lose a life.")
+            lives+=-1
+            xp+=15
+        elif village==4:
+            #Gods
+            rendscreenx("The villagers praise you as their god.  They find material objects usless, but experience priceless.")
+            xp+=100
+        elif village==5:
+            #Gods
+            rendscreenx("The villagers praise you as their god.  They give you 1000 gold.")
+            gold+=1000
+        elif village==6:
+            rendscreenx
+'''
