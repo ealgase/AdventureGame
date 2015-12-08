@@ -1573,7 +1573,7 @@ while True:
                         elif fmove=="B" or fmove=="b":
                             special.remove("Bomb")
                             enemyh+=-500*damagem
-                        input()
+                            input()
                         else:
                             sub=math.floor(random.random()*10)
                             enemyh+=-sub*3.1*damagem*10
