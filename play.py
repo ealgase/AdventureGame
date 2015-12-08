@@ -1050,7 +1050,7 @@ while True:
         #Bear 10 HP per XP, bombs destroy Rewards 20 XP
         #Giant 30 HP per XP, bombs do 1500 damage Rewards 100 XP
         #Mars refugee 40 HP per xp, bombs destroy
-        if mars=1:
+        if mars==1:
             type=randint(1,5)
         else:
             type=randint(1,4)
