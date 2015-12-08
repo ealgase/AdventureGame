@@ -2035,7 +2035,7 @@ while True:
             xp+=1
             input()
     elif move==5:
-'''
+        '''
         rendscreenx("You walk up to a village!")
         input()
         village=randint(1,20)
@@ -2065,4 +2065,4 @@ while True:
             gold+=1000
         elif village==6:
             rendscreenx
-'''
+        '''
