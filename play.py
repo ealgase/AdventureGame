@@ -1628,7 +1628,7 @@ while True:
                 input()
                 xp+=10
     elif move==4:
-        if xp>10000 and mars=0:
+        if xp>10000 and mars==0:
             #invasion from Mars!
             i=0
             while i<20:
