@@ -794,7 +794,7 @@ while True:
     input()
     move=random.randint(1,4)
     print(move)
-    #move=randint(1,5)
+    #move=random.randint(1,5)
     if move==1:
         #path
         path=0
@@ -804,7 +804,7 @@ while True:
         if path == "l" or path == "L":
             rendscreenx("You go on the left path.")
             input()
-            lpath=randint(1,10)
+            lpath=random.randint(1,10)
             if lpath==1:
                 goldgotten=math.floor(xp/100)
                 rendscreenx("You found a chest with " + goldgotten + " gold!")
@@ -823,7 +823,7 @@ while True:
                 special.append("Bomb")
                 xp+=1
             elif lpath==5:
-                lpath5=randint(1,3)
+                lpath5=random.randint(1,3)
                 if lpath5==1:
                     rendscreenx("You found a sword!  It grants double damage in all battles!")
                     special.append("Sword")
@@ -846,8 +846,8 @@ while True:
                 xp+=4
             elif lpath==9:
                 #Random special item!
-                #rsa=randint
-                rsa=randint(1,5)
+                #rsa=random.randint
+                rsa=random.randint(1,5)
                 if rsa==1:
                     rendscreenx("You got a bomb!")
                     special.append("Bomb")
@@ -856,7 +856,7 @@ while True:
                     special.append("Sword")
                     damagem=damagem*2
                 elif rsa==3:
-                    rsa2=randint(1,100)
+                    rsa2=random.randint(1,100)
                     if rsa2==1:
                         rendscreen("You found the epic staff!  It grants x10 health and x10 damage in all battles!")
                         special.append("Epic Staff")
@@ -883,7 +883,7 @@ while True:
                 xp=xp+5
             input()
         elif path=="r" or path=="R":
-            rpath=randint(1,10)
+            rpath=random.randint(1,10)
             if rpath==1:
                 rendscreenx("You found a chest with " + 100 + " gold!")
                 gold+=100
@@ -901,7 +901,7 @@ while True:
                 special.append("Bomb")
                 xp+=1
             elif rpath==5:
-                rpath5=randint(1,3)
+                rpath5=random.randint(1,3)
                 if rpath5==1:
                     rendscreenx("You found a staff!  It grants double health in all battles!")
                     healthm=healthm*2
@@ -924,8 +924,8 @@ while True:
                 xp+=1
             elif rpath==9:
                 #Random special item!
-                #rsa=randint
-                rsa=randint(1,5)
+                #rsa=random.randint
+                rsa=random.randint(1,5)
                 if rsa==1:
                     rendscreenx("You got 2 bombs!")
                     special.append("Bomb")
@@ -935,7 +935,7 @@ while True:
                     special.append("Sword")
                     damagem=damagem*2
                 elif rsa==3:
-                    rsa2=randint(1,1000)
+                    rsa2=random.randint(1,1000)
                     if rsa2==1:
                         rendscreen("You found the epic sword!  It grants x100 health and x100 damage in all battles!")
                         special.append("Epic Sword")
@@ -963,10 +963,10 @@ while True:
                 xp=xp+5
             input()
         else:
-            cpath=randint(1,10)
+            cpath=random.randint(1,10)
             if cpath==1:
                 rendscreenx("You found a book that's pretty good.  However, it does nothing.")
-                book=randint(1,5)
+                book=random.randint(1,5)
                 if book==1:
                     special.append("Harry Potter and the Sorcer's Stone")
                 elif book==2:
@@ -1017,12 +1017,12 @@ while True:
                 ebhealth+=300
                 xp+=5
             elif cpath==6:
-                goldf=randint(1,xp)
+                goldf=random.randint(1,xp)
                 rendscreenx("You found " + goldf + " gold!")
                 gold+=goldf
                 xp+=4
             elif cpath==7:
-                livel=randint(2,4)
+                livel=random.randint(2,4)
                 rendscreenx("You fell into a snake hole.  The snake bit you!  Lose " + livel + "lives!")
                 lives+=-livel
                 xp+=livel*4
@@ -1056,9 +1056,9 @@ while True:
         #Giant 30 HP per XP, bombs do 1500 damage Rewards 100 XP
         #Mars refugee 40 HP per xp, bombs destroy
         if mars==1:
-            type=randint(1,5)
+            type=random.randint(1,5)
         else:
-            type=randint(1,4)
+            type=random.randint(1,4)
         if type==1:
             enemy="monster"
             enemyh=5*xp
@@ -1138,12 +1138,12 @@ while True:
     elif move==3:
         #arena!
         exitarena=0
-        arenatype=randint(1,2)
+        arenatype=random.randint(1,2)
         #up to ten in later updates
         if arenatype==1:
             #5 monters
             #same as origional arena, no XP changes
-            entry=randint(20,xp)
+            entry=random.randint(20,xp)
             rendscreenx("You walk up to an arena.  There are five monsters.  Here are the arena rules:")
             print("You must defeat all 5 enemies.")
             print("To enter, you must pay " + str(entry) + " gold.")
@@ -1441,7 +1441,7 @@ while True:
             #HP based on XP
             #1st dragon 10 HP per XP
             #2nd dragon 20 HP per XP
-            #3rd dragon randint(20,40) HP per XP
+            #3rd dragon random.randint(20,40) HP per XP
             rendscreenx("You walk up to an arena.  There are three dragons.  Here are the arena rules:")
             print("You must defeat all 3 enemies.")
             print("To enter, you must pay 200 gold.")
@@ -1552,7 +1552,7 @@ while True:
                             exitarena=1
                 if exitarena!=1:
                     health=healthm*1000+ebhealth
-                    enemyh=randint(20,40)*xp
+                    enemyh=random.randint(20,40)*xp
                     rendscreenx("Dragon 3: " + enemyh + " health")
                     input()
                     while enemyh>0:
@@ -2043,7 +2043,7 @@ while True:
         '''
         rendscreenx("You walk up to a village!")
         input()
-        village=randint(1,20)
+        village=random.randint(1,20)
         if village==1:
             #Gods
             rendscreenx("The villagers praise you as their god.  They give you 50 gold.")
