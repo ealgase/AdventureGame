@@ -793,6 +793,7 @@ input()
 while True:
     input()
     move=randint(1,4)
+    print(move)
     #move=randint(1,5)
     if move==1:
         #path
@@ -2038,7 +2039,7 @@ while True:
             rendscreenx("You continue on the path.")
             xp+=1
             input()
-    elif move==5:
+#    elif move==5:
         '''
         rendscreenx("You walk up to a village!")
         input()
