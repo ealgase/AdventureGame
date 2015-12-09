@@ -792,7 +792,7 @@ mars=0
 input()
 while True:
     input()
-    move=randint(1,4)
+    move=random.randint(1,4)
     print(move)
     #move=randint(1,5)
     if move==1:
