@@ -9,7 +9,7 @@ import math
 def rendscreenx(text):
     cls()
     print("--------------------------------------------------------------------------------")
-    print("Gold: "+ str(gold) + " Lives: " + str(lives) + " XP: "+xp)
+    print("Gold: "+ str(gold) + " Lives: " + str(lives) + " XP: "+ str(xp))
     print("Special items: "+str(special))
     print("--------------------------------------------------------------------------------")
     print(text)
