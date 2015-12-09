@@ -896,7 +896,7 @@ while True:
                 rendscreenx("A massive frog bites you!  Lose a life!")
                 lives+=-1
                 xp+=4
-            elif lpath==4:
+            elif rpath==4:
                 rendscreenx("You found a bomb!")
                 special.append("Bomb")
                 xp+=1
