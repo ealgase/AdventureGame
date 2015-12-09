@@ -6,6 +6,13 @@ healthm=1
 import time
 import random
 import math
+def rendscreenx(text):
+    cls()
+    print("--------------------------------------------------------------------------------")
+    print("Gold: "+ str(gold) + " Lives: " + str(lives) + " XP: "+xp)
+    print("Special items: "+str(special))
+    print("--------------------------------------------------------------------------------")
+    print(text)
 def randint(n1,n2):
     random.randint(n1,n2)
 def rendscreen(text):
@@ -781,14 +788,8 @@ input()
 rendscreen("Now, you've beaten the tutorial.  Keep playing against harder enemies and getting better.")
 xp=100
 mars=0
-def rendscreenx(text):
-    cls()
-    print("--------------------------------------------------------------------------------")
-    print("Gold: "+ str(gold) + " Lives: " + str(lives) + " XP: "+xp)
-    print("Special items: "+str(special))
-    print("--------------------------------------------------------------------------------")
-    print(text)
 #gameloop
+input()
 while True:
     move=randint(1,4)
     #move=randint(1,5)
