@@ -1451,7 +1451,7 @@ while True:
             gold+=-200
             health=healthm*1000+ebhealth
             enemyh=10*xp
-            rendscreenx("Dragon 1: " + int(enemyh) + " health")
+            rendscreenx("Dragon 1: " + str(enemyh) + " health")
             input()
             while enemyh>0:
                 rendscreenf()
@@ -1502,7 +1502,7 @@ while True:
             if exitarena!=1:
                 health=healthm*1000+ebhealth
                 enemyh=20*xp
-                rendscreenx("Dragon 2: " + int(enemyh) + " health")
+                rendscreenx("Dragon 2: " + str(enemyh) + " health")
                 input()
                 while enemyh>0:
                     rendscreenf()
@@ -1553,7 +1553,7 @@ while True:
                 if exitarena!=1:
                     health=healthm*1000+ebhealth
                     enemyh=random.randint(20,40)*xp
-                    rendscreenx("Dragon 3: " + int(enemyh) + " health")
+                    rendscreenx("Dragon 3: " + str(enemyh) + " health")
                     input()
                     while enemyh>0:
                         rendscreenf()
