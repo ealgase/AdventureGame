@@ -201,7 +201,7 @@ while move!="L" and move!="l" and move!="R" and move!="R" and move!="s" and move
     if move=="l" or move=="L":
         if lgone=="0":
             lgone="1"
-            rendscreen("You go left. You find some food.  You you eat it? Y/N")
+            rendscreen("You go left. You find some food.  Do you eat it? Y/N")
             food1=0
             while food1 != "y" and food1 != "Y" and food1 != "N" and food1 != "n":
                 food1=input()
@@ -791,9 +791,7 @@ mars=0
 #gameloop
 input()
 while True:
-    input()
     move=random.randint(1,4)
-    print(move)
     #move=random.randint(1,5)
     if move==1:
         #path
