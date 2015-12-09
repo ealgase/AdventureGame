@@ -13,8 +13,8 @@ def rendscreenx(text):
     print("Special items: "+str(special))
     print("--------------------------------------------------------------------------------")
     print(text)
-def randint(n1,n2):
-    random.randint(n1,n2)
+def randint(sinput,  einput):
+    random.randint(sinput,einput)
 def rendscreen(text):
     cls()
     print("--------------------------------------------------------------------------------")
@@ -1089,7 +1089,7 @@ while True:
             bomba="destroy "
             xpe=200
             bombm=9999999999999999999999999999
-        rendscreeenx("You come up to a " + enemy + "!")
+        rendscreenx("You come up to a " + enemy + "!")
         input()
         rendscreenx("It wants to fight you!")
         health=healthm*1000+ebhealth
