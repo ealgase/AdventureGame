@@ -807,7 +807,7 @@ while True:
             lpath=random.randint(1,10)
             if lpath==1:
                 goldgotten=math.floor(xp/100)
-                rendscreenx("You found a chest with " + goldgotten + " gold!")
+                rendscreenx("You found a chest with " + int(goldgotten) + " gold!")
                 gold+=goldgotten
                 xp+=1
             elif lpath==2:
@@ -885,7 +885,7 @@ while True:
         elif path=="r" or path=="R":
             rpath=random.randint(1,10)
             if rpath==1:
-                rendscreenx("You found a chest with " + 100 + " gold!")
+                rendscreenx("You found a chest with " + str(100) + " gold!")
                 gold+=100
                 xp+=2
             elif rpath==2:
