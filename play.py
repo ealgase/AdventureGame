@@ -791,6 +791,7 @@ mars=0
 #gameloop
 input()
 while True:
+    input()
     move=randint(1,4)
     #move=randint(1,5)
     if move==1:
