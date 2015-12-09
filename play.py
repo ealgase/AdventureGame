@@ -798,7 +798,7 @@ while True:
     if move==1:
         #path
         path=0
-        rendscreenx("The path branches into three directions: left(L), right(R), and straight(S).  Witch one to you take?")
+        rendscreenx("The path branches into three directions: left(L), right(R), and straight(S).  Witch one do you take?")
         while path!="l" and path!="L" and path!="r" and path!="R" and path!="s" and path!="S":
             path=input()
         if path == "l" or path == "L":
