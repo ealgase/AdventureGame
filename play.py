@@ -1419,9 +1419,9 @@ while True:
                                     rendscreen("You beat all the enemies!")
                                     input()
             if enterarena1=="y" or enterarena1=="Y" and exitarena==0:
-                rendscreen("Prizes:")
+                rendscreen("Prizes")
                 input()
-                rendscreen(entry*5 + " gold")
+                rendscreen(str(entry*5) + " gold")
                 gold+=entry*5
                 input()
                 rendscreen("5 bombs")
