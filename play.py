@@ -1625,7 +1625,7 @@ while True:
                 input()
                 rendscreenx("A dragon staff: grants +1000 health in all battles!")
                 special.append("Dragon Staff")
-                ephealth+=1000
+                ebhealth+=1000
                 input()
                 xp+=500
             else:
