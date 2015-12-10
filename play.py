@@ -1020,7 +1020,7 @@ while True:
                 xp+=5
             elif cpath==6:
                 goldf=random.randint(1,xp)
-                rendscreenx("You found " + goldf + " gold!")
+                rendscreenx("You found " + str(goldf) + " gold!")
                 gold+=goldf
                 xp+=4
             elif cpath==7:
