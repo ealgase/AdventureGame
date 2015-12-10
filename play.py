@@ -1025,7 +1025,7 @@ while True:
                 xp+=4
             elif cpath==7:
                 livel=random.randint(2,4)
-                rendscreenx("You fell into a snake hole.  The snake bit you!  Lose " + livel + "lives!")
+                rendscreenx("You fell into a snake hole.  The snake bit you!  Lose " + str(livel) + "lives!")
                 lives+=-livel
                 xp+=livel*4
             elif cpath==8:
