@@ -792,7 +792,7 @@ mars=0
 input()
 while True:
     move=random.randint(1,8)
-    #move=random.randint(1,5)
+    #move=random.randint(1,9)
     if move==1 or move==2 or move==3 or move==4 or move==5:
         #path
         path=0
@@ -802,7 +802,7 @@ while True:
         if path == "l" or path == "L":
             rendscreenx("You go on the left path.")
             input()
-            lpath=random.randint(1,10)
+            lpath=random.randint(1,11)
             if lpath==1:
                 goldgotten=math.floor(xp/100)
                 rendscreenx("You found a chest with " + int(goldgotten) + " gold!")
@@ -879,6 +879,10 @@ while True:
                 rendscreenx("You fall into a trap and lose a life.")
                 lives+=-1
                 xp=xp+5
+            elif lpath==11:
+                rendscreenx("You go to a villge.  They give you 50 gold to stay away from them.  You stay away.")
+                gold+=50
+                xp+=10
             input()
         elif path=="r" or path=="R":
             rpath=random.randint(1,10)
@@ -2037,11 +2041,10 @@ while True:
             rendscreenx("You continue on the path.")
             xp+=1
             input()
-#    elif move==9:
-        '''
+    elif move==9:
         rendscreenx("You walk up to a village!")
         input()
-        village=random.randint(1,20)
+        village=random.randint(1,6)
         if village==1:
             #Gods
             rendscreenx("The villagers praise you as their god.  They give you 50 gold.")
@@ -2067,5 +2070,55 @@ while True:
             rendscreenx("The villagers praise you as their god.  They give you 1000 gold.")
             gold+=1000
         elif village==6:
-            rendscreenx
-        '''
+            rendscreenx("The villagers fight you!")
+            enemy="villager"
+            enemyh=10*xp
+            bomba="destroy "
+            xpe=10
+            bombm=9999999999999999999999999999
+            rendscreenx("You come up to a " + enemy + "!")
+            input()
+            rendscreenx("It wants to fight you!")
+            health=healthm*1000+ebhealth
+            while enemyh>0:
+                rendscreenf()
+                fmove="0"
+                if "Bomb" in special:
+                    while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
+                        fmove=input("K to kick or P to punch or B to use bomb(bombs "+bomba+"to the enemy.")
+                else:
+                    while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
+                        fmove=input("K to kick or P to punch")
+                if fmove=="k" or fmove=="K":
+                    sub=math.floor(random.random()*10)+13
+                    enemyh+=-sub*damagem*10
+                    print("Damage dealt: "+ str(sub*damagem*10))
+                    input()
+                elif fmove=="adminpass":
+                    enemyh=0
+                    input()
+                elif fmove=="l":
+                    health=-1
+                    input()
+                elif fmove=="B" or fmove=="b":
+                    special.remove("Bomb")
+                    enemyh+=-bombm*damagem
+                    input()
+                else:
+                    sub=math.floor(random.random()*10)
+                    enemyh+=-sub*3.1*damagem*10
+                    print("Damage dealt: "+ str(sub*3.1*damagem*10))
+                    input()
+                rendscreenf()
+                if enemyh>0:
+                    sub=math.floor(random.random()*100*xp/40)
+                    health+=-40*xp/40
+                    print(enemy + " attacks!  Damage dealt: "+ str(sub+40*xp/40))
+                    input()
+                if health<0:
+                    youlose=0
+                    print("You lost a life!")
+                    lives+=-1
+            rendscreenx("You beat the "+enemy+"!")
+            xp+=xpe
+            input()
