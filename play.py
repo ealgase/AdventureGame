@@ -791,9 +791,9 @@ mars=0
 #gameloop
 input()
 while True:
-    move=random.randint(1,4)
+    move=random.randint(1,8)
     #move=random.randint(1,5)
-    if move==1:
+    if move==1 or move==2 or move==3 or move==4 or move==5:
         #path
         path=0
         rendscreenx("The path branches into three directions: left(L), right(R), and straight(S).  Witch one do you take?")
@@ -1045,7 +1045,7 @@ while True:
                 lives+=-3
                 xp+=8
             input()
-    elif move==2:
+    elif move==6:
         #normal enemy
         #Types
         #Monster 5 HP per XP, bombs destroy Rewards 30 XP
@@ -1133,7 +1133,7 @@ while True:
         rendscreenx("You beat the "+enemy+"!")
         xp+=xpe
         input()
-    elif move==3:
+    elif move==7:
         #arena!
         exitarena=0
         arenatype=random.randint(1,2)
@@ -1630,7 +1630,7 @@ while True:
                 rendscreenx("You lost the arena :(")
                 input()
                 xp+=10
-    elif move==4:
+    elif move==8:
         if xp>10000 and mars==0:
             #invasion from Mars!
             i=0
@@ -2037,7 +2037,7 @@ while True:
             rendscreenx("You continue on the path.")
             xp+=1
             input()
-#    elif move==5:
+#    elif move==9:
         '''
         rendscreenx("You walk up to a village!")
         input()
