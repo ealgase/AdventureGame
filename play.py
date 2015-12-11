@@ -11,8 +11,10 @@ import math
 def centerText(text, sidech):
     spacesOnSide = width - text.length - (sidech.length * 2)
     appendSpace = " "
-    for i = 1;  i <= spacesOnSide; i++:
+    i = 0
+    while i <= width:
         appendSpace = appendSpace + " "
+        i++
     retText = sidech + appendSpace + text + appendSpace + sidech
     return retText
 def rendscreenx(text):
@@ -27,8 +29,10 @@ def randint(sinput,  einput):
 def rendscreen(text):
     cls()
     dashNum="-"
-    for i = 1; i <= width; i++:
+    i = 1
+    while i <= width:
         dashNum = dashNum + "-"
+        i++
     print(dashNum);
     print(centerText("Adventure Game", "|"))
     print(dashNum);
