@@ -3,11 +3,19 @@ gold=10
 damagem=1
 special=[]
 healthm=1
-width=80
-height=24
 import time
 import random
 import math
+from sys import argv
+script, width, length = argv
+if width == "":
+    width = 80
+else:
+    width = int(width)
+if length == "":
+    length = 24
+else:
+    length = int(length)
 def centerText(text, sidech):
     spacesOnSide = (width - (len(text) if len(text) % 2 == 0 else len(text) + 1) - (len(sidech) * 2)) / 2
     appendSpace = " "
