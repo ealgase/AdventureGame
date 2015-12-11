@@ -1,10 +1,18 @@
 #Main menu
-length=24
-width=80
 import sys
 import os
 import os.path
 import tty,termios
+from sys import argv
+script, width, length = argv
+if width == "":
+    width = 80
+else:
+    width = int(width)
+if length == "":
+    length = 24
+else:
+    length = int(length)
 class _Getch:
     def __call__(self):
             fd = sys.stdin.fileno()
@@ -86,7 +94,7 @@ while inl != "return":
         i+=1
     inl = get()
 if validButton == 0:
-    os.system("python3 tutorial.py")
+    os.system("python3 tutorial.py " + width + " " + length)
 elif validButton == 2:
     sys.exit()
 else:
@@ -111,9 +119,9 @@ else:
         worlines+=1
     selworld = input("Choose a number: ")
     if str(selworld) == "1":
-        os.system("python3 worlds/base.py")
+        os.system("python3 worlds/base.py " + width + " " + length)
     elif str(selworld) == "2":
-        os.system("python3 worlds/frozen.py")
+        os.system("python3 worlds/frozen.py " + width + " " + length)
     else:
         print("Invalid")
 sys.exit()
