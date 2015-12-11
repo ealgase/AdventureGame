@@ -38,8 +38,10 @@ def rendscreen(text):
     print(dashNum);
     print(centerText("Gold: "+ str(gold) + "\tLives: " + str(lives), "|"))
     print(centerText("Special items: "+str(special), "|"))
-    for lines = 5; lines < height - 3; lines++:
+    lines = 5
+    while lines < height - 3:
         print(centerText("  ", "|"))
+        lines+=1
     print(text)
     print("> ")
 def rendscreenf():
