@@ -11,7 +11,7 @@ import math
 def centerText(text, sidech):
     spacesOnSide = width - len(text) - (len(sidech) * 2)
     appendSpace = " "
-    i = 1
+    i = 3
     while i < width:
         appendSpace = appendSpace + " "
         i+=1
