@@ -18,4 +18,4 @@ You can run it on either:
 ```
 python3 play.py
 ```
-Note: This is a beta test. I have made menus for this, so yeah. Try it!
+Note: This is a beta test. MCJack123 has made menus for this as a contributor, so yeah. Try it!
