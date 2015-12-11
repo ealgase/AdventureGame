@@ -12,7 +12,7 @@ def centerText(text, sidech):
     spacesOnSide = width - len(text) - (len(sidech) * 2)
     appendSpace = " "
     i = 0
-    while i <= width:
+    while i < width:
         appendSpace = appendSpace + " "
         i+=1
     retText = sidech + appendSpace + text + appendSpace + sidech
@@ -30,7 +30,7 @@ def rendscreen(text):
     cls()
     dashNum="-"
     i = 1
-    while i <= width:
+    while i < width:
         dashNum = dashNum + "-"
         i+=1
     print(dashNum);
