@@ -19,3 +19,4 @@ You can run it on either:
 python3 play.py
 ```
 Note: This is a beta test. MCJack123 has made menus for this as a contributor, so yeah. Try it!
+To ealgase: Everything is the same syntax, so edits will be the same.
