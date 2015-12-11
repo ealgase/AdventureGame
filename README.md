@@ -20,4 +20,4 @@ You can run it on either:
 ```
 python3 play.py
 ```
-Note: This is a beta test.
+Note: This is a beta test. I have made menus for this, so yeah. Try it!
