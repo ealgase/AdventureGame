@@ -15,7 +15,7 @@ def centerText(text, sidech):
     while i < width:
         appendSpace = appendSpace + " "
         i+=1
-    retText = sidech + appendSpace + text + appendSpace + sidech
+    retText = sidech + (appendSpace / 2) + text + (appendSpace / 2) + sidech
     return retText
 def rendscreenx(text):
     cls()
