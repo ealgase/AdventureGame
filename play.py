@@ -3,9 +3,18 @@ gold=10
 damagem=1
 special=[]
 healthm=1
+width=80
+height=24
 import time
 import random
 import math
+def centerText(text, sidech):
+    spacesOnSide = width - text.length - (sidech.length * 2)
+    appendSpace = " "
+    for i = 1;  i <= spacesOnSide; i++:
+        appendSpace = appendSpace + " "
+    retText = sidech + appendSpace + text + appendSpace + sidech
+    return retText
 def rendscreenx(text):
     cls()
     print("--------------------------------------------------------------------------------")
@@ -17,11 +26,18 @@ def randint(sinput,  einput):
     random.randint(sinput,einput)
 def rendscreen(text):
     cls()
-    print("--------------------------------------------------------------------------------")
-    print("Gold: "+ str(gold) + " Lives: " + str(lives))
-    print("Special items: "+str(special))
-    print("--------------------------------------------------------------------------------")
+    dashNum="-"
+    for i = 1; i <= width; i++:
+        dashNum = dashNum + "-"
+    print(dashNum);
+    print(centerText("Adventure Game", "|"))
+    print(dashNum);
+    print(centerText("Gold: "+ str(gold) + "\tLives: " + str(lives), "|"))
+    print(centerText("Special items: "+str(special), "|"))
+    for lines = 5; lines < height - 3; lines++:
+        print(centerText("  ", "|"))
     print(text)
+    print("> ")
 def rendscreenf():
     cls()
     print("--------------------------------------------------------------------------------")
