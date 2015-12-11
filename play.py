@@ -9,7 +9,7 @@ import time
 import random
 import math
 def centerText(text, sidech):
-    spacesOnSide = width - text.length - (sidech.length * 2)
+    spacesOnSide = width - text.len() - (sidech.len() * 2)
     appendSpace = " "
     i = 0
     while i <= width:
