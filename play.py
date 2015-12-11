@@ -14,7 +14,7 @@ def centerText(text, sidech):
     i = 0
     while i <= width:
         appendSpace = appendSpace + " "
-        i++
+        i+=1
     retText = sidech + appendSpace + text + appendSpace + sidech
     return retText
 def rendscreenx(text):
@@ -32,7 +32,7 @@ def rendscreen(text):
     i = 1
     while i <= width:
         dashNum = dashNum + "-"
-        i++
+        i+=1
     print(dashNum);
     print(centerText("Adventure Game", "|"))
     print(dashNum);
