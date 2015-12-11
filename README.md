@@ -20,3 +20,4 @@ You can run it on either:
 ```
 python3 play.py
 ```
+Note: This is a beta test.
