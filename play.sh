@@ -1,1 +1,2 @@
-python3 play.py
+#!/bin/bash
+python3 menu.py
