@@ -94,7 +94,7 @@ while inl != "return":
         i+=1
     inl = get()
 if validButton == 0:
-    os.system("python3 tutorial.py " + width + " " + length)
+    os.system("python3 tutorial.py " + str(width) + " " + str(length))
 elif validButton == 2:
     sys.exit()
 else:
@@ -119,9 +119,9 @@ else:
         worlines+=1
     selworld = input("Choose a number: ")
     if str(selworld) == "1":
-        os.system("python3 worlds/base.py " + width + " " + length)
+        os.system("python3 worlds/base.py " + str(width) + " " + str(length))
     elif str(selworld) == "2":
-        os.system("python3 worlds/frozen.py " + width + " " + length)
+        os.system("python3 worlds/frozen.py " + str(width) + " " + str(length))
     else:
         print("Invalid")
 sys.exit()
