@@ -5,7 +5,7 @@ import os.path
 import tty,termios
 import argparse
 args = argparse.ArgumentParser(description='The menu for AdventureGame.')
-width = length = null
+width = length = 0
 args.add_argument('-w', dest='width', const=80, type=int, help='The width of the menu.')
 args.add_argument('-l', dest='length', const=24, type=int, help='The length of the menu.')
 args.parse_args()
