@@ -4,14 +4,12 @@ import os
 import os.path
 import tty,termios
 from sys import argv
-script = argv
-width = argv
-length = argv
-if width == [""]:
+script, width, length = argv
+if width == "":
     width = 80
 else:
     width = width
-if length == [""]:
+if length == "":
     length = 24
 else:
     length = length
