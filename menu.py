@@ -6,11 +6,13 @@ import tty,termios
 import argparse
 args = argparse.ArgumentParser(description='The menu for AdventureGame.')
 width = length = 0
-args.add_argument('width', dest='width', const=80, type=int, help='The width of the menu.', nargs='?', required=False)
-args.add_argument('length', dest='length', const=24, type=int, help='The length of the menu.', nargs='?', required=False)
+args.add_argument('-width', const=80, default=80, type=int, help='The width of the menu.', nargs='?', required=False)
+args.add_argument('-length', const=24, default-24, type=int, help='The length of the menu.', nargs='?', required=False)
 inpu = args.parse_args()
 width = inpu.width
 length = inpu.length
+print(width)
+print(length)
 class _Getch:
     def __call__(self):
             fd = sys.stdin.fileno()
