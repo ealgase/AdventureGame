@@ -10,7 +10,7 @@ length = argv
 if width == "":
     width = 80
 else:
-    width = int(width)
+    width = width
 if length == "":
     length = 24
 else:
