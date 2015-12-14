@@ -3,13 +3,16 @@ import sys
 import os
 import os.path
 import tty,termios
-import argparse
-args = argparse.ArgumentParser(description='The menu for AdventureGame.')
-width = length = null
-args.add_argument('-w', dest='width', const=80, type=int, help='The width of the menu.')
-args.add_argument('-l', dest='length', const=24, type=int, help='The length of the menu.')
-args.parse_args()
-print(str(width) + str(length))
+from sys import argv
+script, width, length = argv
+if width == "":
+    width = 80
+else:
+    width = width
+if length == "":
+    length = 24
+else:
+    length = length
 class _Getch:
     def __call__(self):
             fd = sys.stdin.fileno()
@@ -52,7 +55,14 @@ def cls():
     print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 cls()
 menuScreens=[[0 for x in range(24)] for x in range(3)]
-menuScreens[0] = ["-" * width,centerText("AdventureGame - Menu", "|"),"-" * width,"|" + (" " * (width - 2)) + "|",centerText("[Tutorial]", "|"),"|" + (" " * (width - 2)) + "|",centerText("Select World","|"),"|" + (" " * (width - 2)) + "|",centerText("Quit","|")]
+def xh(widthv,stri):
+    i=0
+    rstr=stri
+    while i<widthv:
+        i+=1
+        rstr=rstr+stri
+    return rstr
+menuScreens[0] = [xh(width,"-"),centerText("AdventureGame - Menu", "|"),xh(width,"-"),"|" + (xh(width-2," "))) + "|",centerText("[Tutorial]", "|"),"|" + (xh(width-2," ")) + "|",centerText("Select World","|"),"|" + (xh(width-2," ")) + "|",centerText("Quit","|")]
 i = 8
 while i < length - 3:
     menuScreens[0].append("|" + (" " * (width - 2)) + "|")
