@@ -4,7 +4,9 @@ import os
 import os.path
 import tty,termios
 from sys import argv
-script, width, length = argv
+script = argv
+width = argv
+length = argv
 if width == "":
     width = 80
 else:
