@@ -3,16 +3,13 @@ import sys
 import os
 import os.path
 import tty,termios
-from sys import argv
-script, width, length = argv
-if width == "":
-    width = 80
-else:
-    width = width
-if length == "":
-    length = 24
-else:
-    length = length
+import argparse		+from sys import argv
+args = argparse.ArgumentParser(description='The menu for AdventureGame.')		+script, width, length = argv
+width = length = null		+if width == "":
+args.add_argument('-w', dest='width', const=80, type=int, help='The width of the menu.')		+    width = 80
+args.add_argument('-l', dest='length', const=24, type=int, help='The length of the menu.')		+else:
+args.parse_args()		+    width = width
+print(str(width) + str(length))
 class _Getch:
     def __call__(self):
             fd = sys.stdin.fileno()
