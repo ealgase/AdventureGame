@@ -14,7 +14,7 @@ else:
 if length == "":
     length = 24
 else:
-    length = int(length)
+    length = length
 class _Getch:
     def __call__(self):
             fd = sys.stdin.fileno()
