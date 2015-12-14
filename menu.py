@@ -56,14 +56,7 @@ def cls():
     print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 cls()
 menuScreens=[[0 for x in range(24)] for x in range(3)]
-def xh(widthv,stri):
-    i=0
-    rstr=stri
-    while i<widthv:
-        i+=1
-        rstr=rstr+stri
-    return rstr
-menuScreens[0] = [xh(width,"-"),centerText("AdventureGame - Menu", "|"),xh(width,"-"),"|" + (xh(width-2," ")) + "|",centerText("[Tutorial]", "|"),"|" + (xh(width-2," ")) + "|",centerText("Select World","|"),"|" + (xh(width-2," ")) + "|",centerText("Quit","|")]
+menuScreens[0] = ["-" * width,centerText("AdventureGame - Menu", "|"),"-" * width,"|" + (" " * (width-2)) + "|",centerText("[Tutorial]", "|"),"|" + (" " * (width-2)) + "|",centerText("Select World","|"),"|" + (" " * (width-2)) + "|",centerText("Quit","|")]
 i = 8
 while i < length - 3:
     menuScreens[0].append("|" + (" " * (width - 2)) + "|")
