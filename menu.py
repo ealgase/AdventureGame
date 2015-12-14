@@ -39,7 +39,7 @@ def get():
                 return "right"
         elif k=='\x1b[D':
                 return "left"
-        elif k=='\r\r\r':
+        elif k=='return':
                 return "return"
         else:
                 print(k)
