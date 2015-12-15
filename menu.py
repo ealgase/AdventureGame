@@ -6,8 +6,8 @@ import tty,termios
 import argparse
 args = argparse.ArgumentParser(description='The menu for AdventureGame.')
 width = length = 0
-args.add_argument('-width', const=80, default=80, type=int, help='The width of the menu.', nargs='?', required=False)
-args.add_argument('-length', const=24, default-24, type=int, help='The length of the menu.', nargs='?', required=False)
+args.add_argument('width', default=80, type=int, help='The width of the menu.', nargs='?')
+args.add_argument('length', default=24, type=int, help='The length of the menu.', nargs='?')
 inpu = args.parse_args()
 width = inpu.width
 length = inpu.length
