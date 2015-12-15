@@ -46,7 +46,7 @@ def get():
         else:
                 print(k)
                 print("not an arrow key!")
-def centerText(text, sidech):
+def centerText(text, sidech="|"):
     spacesOnSide = (width - (len(text) if len(text) % 2 == 0 else len(text) + 1) - (len(sidech) * 2)) / 2
     appendSpace = " "
     i = 1
@@ -102,7 +102,7 @@ if validButton == 0:
 elif validButton == 2:
     sys.exit()
 else:
-    canRun=[0 for x in range(3)]
+    files = os.listDir("worlds")
     cls()
     print("-" * width)
     print(centerText("AdventureGame - Select World","|"))
@@ -110,22 +110,17 @@ else:
     print("|" + (" " * (width - 2)) + "|")
     print(centerText("Choose a world:","|"))
     print("|" + (" " * (width - 2)) + "|")
-    print(centerText("1. Base World","|"))
-    print("|" + (" " * (width - 2)) + "|")
-    canRun[1] = 1
-    worlines=8
-    if os.path.isfile("worlds/frozen.py"):
-        print(centerText("2. Frozen Tundra", "|"))
-        canRun[2] = 1
-        worlines+=1
+    worlines = 6
+    worlds = 0
+    for world in files:
+        with open(world, 'r') as f:
+            first_line = f.readline()
+        print(centerText(str(worlds) + ". " + first_line))
+        print("|" + (" " * (width - 2)) + "|")
+        worlines += 2
+        worlds+=1
     while worlines < length:
         print("|" + (" " * (width - 2)) + "|")
-        worlines+=1
     selworld = input("Choose a number: ")
-    if str(selworld) == "1":
-        os.system("python3 worlds/base.py " + str(width) + " " + str(length))
-    elif str(selworld) == "2":
-        os.system("python3 worlds/frozen.py " + str(width) + " " + str(length))
-    else:
-        print("Invalid")
+    os.system("python3 " + files[int(selworld)] + " " + width + " " + length)
 sys.exit()
