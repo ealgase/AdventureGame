@@ -4,6 +4,7 @@ import os
 import os.path
 import tty,termios
 import argparse
+from os import listdir
 args = argparse.ArgumentParser(description='The menu for AdventureGame.')
 width = length = 0
 args.add_argument('width', default=80, type=int, help='The width of the menu.', nargs='?')
