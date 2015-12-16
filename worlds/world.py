@@ -1,3 +1,4 @@
+ender=0
 moonmon=0
 healthm=1
 damagem=1
@@ -10,7 +11,7 @@ lives=10
 xp=100
 from commands import *
 import random
-worlds=[["Normal","norm.py"],["Frozen Tundra", "frozen.py"], ["Moon", "moon.py"]]
+worlds=[["Normal","norm.py"],["Frozen Tundra", "frozen.py"], ["Moon", "moon.py"], ["Minecraft", "blocked.py"]]
 worldn=len(worlds)
 worldc=random.randint(0,worldn-1)
 while True:
