@@ -368,7 +368,7 @@ elif move==7:
     #up to ten in later updates
     if arenatype==1:
         #5 monters
-        #same as origional arena, no XP changes
+        #same as original arena, no XP changes
         entry=random.randint(20,xp)
         rendscreenx("You walk up to an arena.  There are five monsters.  Here are the arena rules:")
         print("You must defeat all 5 enemies.")

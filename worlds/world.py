@@ -1,3 +1,4 @@
+moonmon=0
 healthm=1
 damagem=1
 ebhealth=0
