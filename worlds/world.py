@@ -1,11 +1,11 @@
 ender=0
 moonmon=0
-healthm=1
-damagem=1
-ebhealth=0
+healthm=4
+damagem=8
+ebhealth=250
 import math
 mars=0
-special=[]
+special=['Glove', 'Fur Coat', 'Spear', 'Bomb', 'Bomb', 'Golden Vest', 'Sword', 'Bomb', 'Bomb', 'Bomb', 'Bomb', 'Bomb', 'Staff']
 gold=400
 lives=10
 xp=100
