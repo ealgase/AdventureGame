@@ -20,7 +20,7 @@ move=random.randint(1,9)
 if move==1 or move==2 or move==3 or move==4 or move==5:
     #path
     path=0
-    rendscreenx("The path branches into three directions: left(L), right(R), and straight(S).  Witch one do you take?")
+    rendscreenx("The path branches into three directions: left(L), right(R), and straight(S).  Which one do you take?")
     while path!="l" and path!="L" and path!="r" and path!="R" and path!="s" and path!="S":
         path=input()
     if path == "l" or path == "L":
@@ -208,6 +208,7 @@ if move==1 or move==2 or move==3 or move==4 or move==5:
             berriese=0
             while berriese!="y" and berriese!="Y" and berriese!="n" and berriese!="N":
                 rendscreenx("You find some berries.  Do you eat them! Y/N")
+                berriese=input()
             if berriese=="y" or berriese=="Y":
                 rendscreenx("They were poisoned! Lose a life!")
                 lives+=-1
@@ -219,6 +220,7 @@ if move==1 or move==2 or move==3 or move==4 or move==5:
             berriese=0
             while berriese!="y" and berriese!="Y" and berriese!="n" and berriese!="N":
                 rendscreenx("You find some berries.  Do you eat them! Y/N")
+                berriese=input()
             if berriese=="y" or berriese=="Y":
                 rendscreenx("They tasted good! Gain a life!")
                 lives+=1
@@ -230,6 +232,7 @@ if move==1 or move==2 or move==3 or move==4 or move==5:
             berriese=0
             while berriese!="y" and berriese!="Y" and berriese!="n" and berriese!="N":
                 rendscreenx("You find some berries.  Do you eat them! Y/N")
+                berriese=input()
             if berriese=="y" or berriese=="Y":
                 rendscreenx("You found a bomb under them!")
                 special.append("Bomb")
