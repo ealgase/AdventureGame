@@ -114,8 +114,13 @@ else:
     worlines = 6
     worlds = 0
     for world in files:
-        with open(world, 'r') as f:
-            first_line = f.readline()
+        fp = open("worlds/" + world)
+        for i, line in enumerate(fp):
+            if i == 1:
+                first_line = line
+            elif i > 1:
+                break
+        fp.close()
         print(centerText(str(worlds) + ". " + first_line))
         print("|" + (" " * (width - 2)) + "|")
         worlines += 2
