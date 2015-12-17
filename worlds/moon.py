@@ -1,3 +1,4 @@
+#Moon
 #another world, in this one you teleport to the moon
 import random
 def rendscreenx(text):
