@@ -1,3 +1,4 @@
+#Original
 import random
 def rendscreenx(text):
     cls()
