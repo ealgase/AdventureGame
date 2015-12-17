@@ -1,15 +1,17 @@
-healthm=1
-damagem=1
-ebhealth=0
+ender=0
+moonmon=0
+healthm=4
+damagem=8
+ebhealth=250
 import math
 mars=0
-special=[]
+special=['Glove', 'Fur Coat', 'Spear', 'Bomb', 'Bomb', 'Golden Vest', 'Sword', 'Bomb', 'Bomb', 'Bomb', 'Bomb', 'Bomb', 'Staff']
 gold=400
 lives=10
 xp=100
 from commands import *
 import random
-worlds=[["Normal","norm.py"],["Frozen Tundra", "frozen.py"], ["Moon", "moon.py"]]
+worlds=[["Normal","norm.py"],["Frozen Tundra", "frozen.py"], ["Moon", "moon.py"], ["Minecraft", "blocked.py"]]
 worldn=len(worlds)
 worldc=random.randint(0,worldn-1)
 while True:

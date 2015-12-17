@@ -16,44 +16,106 @@ def rendscreenf():
     print("--------------------------------------------------------------------------------")
 def cls():
     print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
-moonm=random.randint(1,3)
-if moonm==1:
-    rendscreenx("You walk around on the moon.")
-    xp+=10
-elif moonm==2:
-    if moonmon==1:
-        type=random.randint(1,5)
+mcm=random.randint(1,2)
+if mcm==1:
+    if ender==1:
+        type=random.randint(1,16)
     else:
-        type=random.randint(1,4)
+        type=random.randint(1,15)
     if type==1:
-        enemy="monster"
-        enemyh=5*xp
-        bomba="destroy "
-        xpe=40
-        bombm=9999999999999999999999999999
+        enemy="Blaze"
+        enemyh=10*xp
+        bomba="don't affect "
+        xpe=10
+        bombm=0
     elif type==2:
-        enemy="dust bunny"
-        enemyh=2*xp
+        enemy="Chicken Jockey"
+        enemyh=3*xp
         bomba="destroy "
         xpe=30
         bombm=9999999999999999999999999999
     elif type==3:
-        enemy="moon dragon"
-        enemyh=40*xp
+        enemy="Creeper"
+        enemyh=50*xp
         bomba="don't affect "
-        xpe=200
+        xpe=20
         bombm=0
     elif type==4:
-        enemy="moon stalker"
+        enemy="Elder Guardian"
         enemyh=20*xp
         bomba="do 1500 damage to "
         xpe=100
         bombm=1500
-    else:
-        enemy="cow"
+    elif type==5:
+        enemy="Ghast"
+        enemyh=3*xp
+        bomba="don't affect "
+        xpe=70
+        bombm=0
+    elif type==6:
+        enemy="Guardian"
         enemyh=90*xp
+        bomba="don't affect "
+        xpe=20
+        bombm=0
+    elif type==7:
+        enemy="Magma Cube"
+        enemyh=10*xp
+        bomba="do 500 damage to "
+        xpe=10
+        bombm=500
+    elif type==8:
+        enemy="Silverfish"
+        enemyh=10*xp
         bomba="destroy "
+        xpe=30
+        bombm=9999999999999999999999999999
+    elif type==9:
+        enemy="Skeleton"
+        enemyh=200*xp
+        bomba="don't affect "
         xpe=200
+        bombm=0
+    elif type==10:
+        enemy="Slime"
+        enemyh=100*xp
+        bomba="do 2500 damage to "
+        xpe=100
+        bombm=2500
+    elif type==11:
+        enemy="Spider Jockey"
+        enemyh=200*xp
+        bomba="don't affect "
+        xpe=20
+        bombm=0
+    elif type==12:
+        enemy="Witch"
+        enemyh=900*xp
+        bomba="don't affect "
+        xpe=500
+        bombm=0
+    elif type==13:
+        enemy="Wither Skeleton"
+        enemyh=20*xp
+        bomba="do 500 damage to "
+        xpe=30
+        bombm=500
+        enemy="Zombie"
+        enemyh=20*xp
+        bomba="destroy "
+        xpe=20
+        bombm=9999999999999999999999999999
+    elif type==14:
+        enemy="Zombie Villager"
+        enemyh=10*xp
+        bomba="don't affect "
+        xpe=10
+        bombm=0
+    elif type==15:
+        enemy="Endermite"
+        enemyh=random.randint(1,3)*xp
+        bomba="destroy "
+        xpe=5
         bombm=9999999999999999999999999999
     rendscreenx("You come up to a " + enemy + "!")
     input()
@@ -100,20 +162,11 @@ elif moonm==2:
             lives+=-1
     rendscreenx("You beat the "+enemy+"!")
     xp+=xpe
-elif moonm==3:
-    rendscreenx("You find some cheese!")
+elif mcm==2:
+    rendscreenx("You find a block!")
     input()
-    rendscreenx("You you eat it? Y/N")
-    eatc=0
-    while eatc!='y' or eatc!='Y' or eatc!='n' or eatc!='N':
-        eatc=input()
-    cheeseg=random.randint(1,2)
-    if eatc=='y' or eatc=='Y':
-        rendscreenx("You eat the cheese.")
-        input()
-        if cheeseg==1:
-            rendscreenx("It was good! Gain a life!")
-            lives+=1
-        elif cheeseg==2:
-            rendscreenx("It was posioned!  Lose a life!")
+    blockg=random.randint(1,23)
+    blocks=["Stone", "Grass", "Dirt", "Bedrock", "Sand", "Gravel", "Gold Ore", "Iron Ore", "Coal Ore", "Log", "Leaves", "Lapis Ore", "Sandstone", "Tallgrass", "Deadbush", "Yellow Flower", "Red Flower", "Brown Mushroom", "Red Mushroom", "Diamond Ore", "Redstone Ore", "Emerald Ore", "Packed Ice"]
+    special.append(blocks[blockg])
+    rendscreenx("You found a " + blocks[blockg] + "block!")
 input()
