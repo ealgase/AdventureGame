@@ -984,6 +984,7 @@ while True:
                 berriese=0
                 while berriese!="y" and berriese!="Y" and berriese!="n" and berriese!="N":
                     rendscreenx("You find some berries.  Do you eat them! Y/N")
+                    berriese=input()
                 if berriese=="y" or berriese=="Y":
                     rendscreenx("They were poisoned! Lose a life!")
                     lives+=-1
@@ -995,6 +996,7 @@ while True:
                 berriese=0
                 while berriese!="y" and berriese!="Y" and berriese!="n" and berriese!="N":
                     rendscreenx("You find some berries.  Do you eat them! Y/N")
+                    berriese=input()
                 if berriese=="y" or berriese=="Y":
                     rendscreenx("They tasted good! Gain a life!")
                     lives+=1
@@ -1006,6 +1008,7 @@ while True:
                 berriese=0
                 while berriese!="y" and berriese!="Y" and berriese!="n" and berriese!="N":
                     rendscreenx("You find some berries.  Do you eat them! Y/N")
+                    berriese=input()
                 if berriese=="y" or berriese=="Y":
                     rendscreenx("You found a bomb under them!")
                     special.append("Bomb")
