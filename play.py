@@ -202,10 +202,10 @@ while move!="L" and move!="l" and move!="R" and move!="R" and move!="s" and move
     if move=="l" or move=="L":
         if lgone=="0":
             lgone="1"
-            rendscreen("You go left. You find some food.  Do you eat it? Y/N")
+            rendscreen("You go left. You find some food.  Do you eat it?")
             food1=0
             while food1 != "y" and food1 != "Y" and food1 != "N" and food1 != "n":
-                food1=input()
+                food1=menu([['Yes','Y'],['No','N']],0,'Do you eat the food?')
             if food1=="y" or food1=="Y":
                 rendscreen("It was poisoned!  Lose a life")
                 lives+=-1
@@ -1014,7 +1014,7 @@ while True:
                 berriese=0
                 while berriese!="y" and berriese!="Y" and berriese!="n" and berriese!="N":
                     rendscreenx("You find some berries.  Do you eat them?")
-                    berriese=menu([['Yes','Y'],['No','N']],random.randint(0,2),'Do you eat the berries?')
+                    berriese=menu([['Yes','Y'],['No','N']],random.randint(0,1),'Do you eat the berries?')
                 if berriese=="y" or berriese=="Y":
                     rendscreenx("You found a bomb under them!")
                     special.append("Bomb")
@@ -2124,3 +2124,4 @@ while True:
             rendscreenx("You beat the "+enemy+"!")
             xp+=xpe
             input()
+    time.sleep(.2)
