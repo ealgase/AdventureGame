@@ -24,4 +24,27 @@ lives=13
 gold=560
 ebhealth=250
 damagem=8
-healthm=2
+healthm=4
+ender=0
+moonmon=0
+tut=menu([['Play Tutorial','t'],['Start playing','s'],['Exit','e']],1,'What do you want to do?')
+if tut=='t':
+    execfile('tutorial.py')
+elif tut=='s':
+    pass
+else:
+    exit()
+'''
+worlds=[["Normal","norm.py"],["Frozen Tundra", "frozen.py"], ["Moon", "moon.py"], ["Minecraft", "blocked.py"]]
+worldn=len(worlds)
+worldc=random.randint(0,worldn-1)
+while True:
+    exec(open(worlds[worldc][1]).read())
+    cw=random.randint(1,100)
+    if cw==1:
+        rendscreenx("Changing world...")
+        input()
+        worldc=random.randint(0,worldn-1)
+        print("Switching to world " + worlds[worldc][0])
+        input()
+'''
