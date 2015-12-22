@@ -132,8 +132,8 @@ ebhealth=0
 special=[]
 berries=0
 while berries != "y" and berries != "Y" and berries != "N" and berries != "n":
-    rendscreen("You find some berries.  Do you eat them? Y for yes and N for no.")
-    berries=input()
+    rendscreen("You find some berries.  Do you eat them?")
+    berries=menu([['Yes','Y'],['No','N']],0,'You find some berries.  Do you eat them?')
 if berries=="y" or berries=="Y":
     rendscreen("Under the leaves, you found a glove!  It grants +50 health in all battles!")
     ebhealth+=50
@@ -145,8 +145,8 @@ else:
 input()
 river="0"
 while river!="Y" and river!="y" and river!="N" and river!="n":
-    rendscreen("After walking for quite some time, you come to a river.  There's a bear right behind you.  Do you try to cross the river? Y/N")
-    river=input()
+    rendscreen("After walking for quite some time, you come to a river.  There's a bear right behind you.  Do you try to cross the river?")
+    river=menu([['Yes','Y'],['No','N']],0,'Do you try to cross the river?')
 if river=="Y" or river=="y":
     rendscreen("You manage to cross the river, but you get sick and lose a life.")
     lives+=-1
@@ -197,8 +197,8 @@ move="0"
 lgone="0"
 rgone="0"
 while move!="L" and move!="l" and move!="R" and move!="R" and move!="s" and move!="S":
-    rendscreen("Do you go left(L), right(R) or straight(S)")
-    move=input()
+    rendscreen("Do you go left, right, or straight?")
+    move=menu([['Left','L'],['Right','R'],['Straight','S']],0,'What direction do you go?')
     if move=="l" or move=="L":
         if lgone=="0":
             lgone="1"
@@ -239,9 +239,9 @@ while move!="L" and move!="l" and move!="R" and move!="R" and move!="s" and move
             input()
         else:
             watf="?"
-            rendscreen("Do you want to fight? Y/N")
+            rendscreen("Do you want to fight?")
             while watf!="Y" and watf!="y" and watf!="N" and watf!="n":
-                watf=input()
+                watf=menu([['Yes','Y'],['No','N']],0,'Do you want to fight?')
             if watf=="y" or watf=="Y":
                 giantf="1"
             else:
@@ -374,8 +374,8 @@ special.append("Bomb")
 input()
 path=0
 while path != "r" and path != "R" and path != "l" and path != "L":
-    rendscreen("The path branches into 2 pathes: left(l) or right(r).  Which one do you take?")
-    path=input()
+    rendscreen("The path branches into 2 paths: left or right.  Which one do you take?")
+    path=menu([['Left','L'],['Right','R']],0,'Which path do you take?')
 if path == "r" or path == "R":
     #Stuff for right path here.
     rendscreen("You go on the right path.")
@@ -491,9 +491,9 @@ print("You must defeat all 5 enemies.")
 print("To enter, you must pay 20 gold.")
 input()
 enterarena1=0
-rendscreen("Do you want to enter? Y/N")
+rendscreen("Do you want to enter the arena?")
 while enterarena1!="y" and enterarena1!="Y" and enterarena1!="n" and enterarena1!="N":
-    enterarena1=input("Do you want to enter? Y/N: ")
+    enterarena1=menu([['Yes','Y'],['No','N']],0,'Do you want to enter?')
 if enterarena1=="y" or enterarena1=="Y":
     rendscreen("You choose to enter the arena.")
     input()
@@ -792,14 +792,13 @@ mars=0
 #gameloop
 input()
 while True:
-    move=random.randint(1,8)
-    #move=random.randint(1,9)
+    move=random.randint(1,9)
     if move==1 or move==2 or move==3 or move==4 or move==5:
         #path
         path=0
-        rendscreenx("The path branches into three directions: left(L), right(R), and straight(S).  Witch one do you take?")
+        rendscreenx("The path branches into three directions: left, right, and straight.  Which one do you take?")
         while path!="l" and path!="L" and path!="r" and path!="R" and path!="s" and path!="S":
-            path=input()
+            path=menu([['Left','L'],['Right','R'],['Straight','S']],random.randint(0,2),'What direction do you go in?')
         if path == "l" or path == "L":
             rendscreenx("You go on the left path.")
             input()
@@ -888,7 +887,7 @@ while True:
         elif path=="r" or path=="R":
             rpath=random.randint(1,10)
             if rpath==1:
-                rendscreenx("You found a chest with " + str(100) + " gold!")
+                rendscreenx("You found a chest with 100 gold!")
                 gold+=100
                 xp+=2
             elif rpath==2:
@@ -990,8 +989,8 @@ while True:
             elif cpath==2:
                 berriese=0
                 while berriese!="y" and berriese!="Y" and berriese!="n" and berriese!="N":
-                    rendscreenx("You find some berries.  Do you eat them! Y/N")
-                    berriese=input()
+                    rendscreenx("You find some berries.  Do you eat them?")
+                    berriese=menu([['Yes','Y'],['No','N']],random.randint(0,2),'Do you eat the berries?')
                 if berriese=="y" or berriese=="Y":
                     rendscreenx("They were poisoned! Lose a life!")
                     lives+=-1
@@ -1002,8 +1001,8 @@ while True:
             elif cpath==3:
                 berriese=0
                 while berriese!="y" and berriese!="Y" and berriese!="n" and berriese!="N":
-                    rendscreenx("You find some berries.  Do you eat them! Y/N")
-                    berriese=input()
+                    rendscreenx("You find some berries.  Do you eat them?")
+                    berriese=menu([['Yes','Y'],['No','N']],random.randint(0,2),'Do you eat the berries?')
                 if berriese=="y" or berriese=="Y":
                     rendscreenx("They tasted good! Gain a life!")
                     lives+=1
@@ -1014,8 +1013,8 @@ while True:
             elif cpath==4:
                 berriese=0
                 while berriese!="y" and berriese!="Y" and berriese!="n" and berriese!="N":
-                    rendscreenx("You find some berries.  Do you eat them! Y/N")
-                    berriese=input()
+                    rendscreenx("You find some berries.  Do you eat them?")
+                    berriese=menu([['Yes','Y'],['No','N']],random.randint(0,2),'Do you eat the berries?')
                 if berriese=="y" or berriese=="Y":
                     rendscreenx("You found a bomb under them!")
                     special.append("Bomb")
@@ -2055,9 +2054,9 @@ while True:
             xp+=10
         elif village==2:
             #Gods
-            rendscreenx("The villagers praise you as their god.  They give a sword that grants 2x damage in all battles.")
+            rendscreenx("The villagers praise you as their god.  They give a sword that grants 3x damage in all battles.")
             special.append("Sword")
-            damagem=damagem*2
+            damagem=damagem*3
             xp+=10
         elif village==3:
             #Gods
