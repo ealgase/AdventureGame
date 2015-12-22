@@ -99,7 +99,7 @@ while enemyh>0:
     rendscreenf()
     fmove="0"
     while fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-        fmove=input("K to kick or P to punch")
+        fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
     if fmove=="K" or fmove=="k":
         sub=math.floor(random.random()*10)+5
         enemyh=enemyh-sub*10
@@ -158,7 +158,7 @@ else:
         rendscreenf()
         fmove="0"
         while fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-            fmove=input("K to kick or P to punch")
+            fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
         if fmove=="K" or fmove=="k":
             sub=math.floor(random.random()*10)+6
             enemyh=enemyh-sub*10
@@ -252,7 +252,7 @@ if giantf=="1":
         rendscreenf()
         fmove="0"
         while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-            fmove=input("K to kick or P to punch")
+            fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
         if fmove=="k" or fmove=="K":
             sub=math.floor(random.random()*10)+6
             enemyh+=-sub*10
@@ -328,10 +328,10 @@ if giantf=="1":
         fmove="0"
         if "Bomb" in special:
             while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                fmove=input("K to kick or P to punch or B to use bomb")
+                fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb?')
         else:
             while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                fmove=input("K to kick or P to punch")
+                fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
         if fmove=="k" or fmove=="K":
             sub=math.floor(random.random()*10)+6
             enemyh+=-sub*damagem*10
@@ -429,10 +429,10 @@ if path == "r" or path == "R":
         fmove="0"
         if "Bomb" in special:
             while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                fmove=input("K to kick or P to punch or B to use bomb(bombs only do 1000 damage in this battle)")
+                fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs only deal 1000 damage in this battle)?')
         else:
             while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                fmove=input("K to kick or P to punch")
+                fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
         if fmove=="k" or fmove=="K":
             sub=math.floor(random.random()*10)+13
             enemyh+=-sub*damagem*10
@@ -506,10 +506,10 @@ if enterarena1=="y" or enterarena1=="Y":
         fmove="0"
         if "Bomb" in special:
             while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                fmove=input("K to kick or P to punch or B to use bomb(bombs only do 1000 damage in this battle)")
+                fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs only deal 1000 damage in this battle)?')
         else:
             while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                fmove=input("K to kick or P to punch")
+                fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
         if fmove=="k" or fmove=="K":
             sub=math.floor(random.random()*10)+13
             enemyh+=-sub*damagem*10
@@ -559,10 +559,10 @@ if enterarena1=="y" or enterarena1=="Y":
             fmove="0"
             if "Bomb" in special:
                 while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                    fmove=input("K to kick or P to punch or B to use bomb(bombs only do 1000 damage in this battle)")
+                    fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs only deal 1000 damage in this battle)?')
             else:
                 while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                    fmove=input("K to kick or P to punch")
+                    fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
             if fmove=="k" or fmove=="K":
                 sub=math.floor(random.random()*10)+13
                 enemyh+=-sub*damagem*10
@@ -612,10 +612,10 @@ if enterarena1=="y" or enterarena1=="Y":
                 fmove="0"
                 if "Bomb" in special:
                     while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                        fmove=input("K to kick or P to punch or B to use bomb(bombs only do 1000 damage in this battle)")
+                        fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs only deal 1000 damage in this battle)?')
                 else:
                     while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                        fmove=input("K to kick or P to punch")
+                        fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
                 if fmove=="k" or fmove=="K":
                     sub=math.floor(random.random()*10)+13
                     enemyh+=-sub*damagem*10
@@ -664,10 +664,10 @@ if enterarena1=="y" or enterarena1=="Y":
                         fmove="0"
                         if "Bomb" in special:
                             while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                                fmove=input("K to kick or P to punch or B to use bomb(bombs only do 1000 damage in this battle)")
+                                fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs only deal 1000 damage in this battle)?')
                         else:
                             while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                                fmove=input("K to kick or P to punch")
+                                fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
                         if fmove=="k" or fmove=="K":
                             sub=math.floor(random.random()*10)+13
                             enemyh+=-sub*damagem*10
@@ -716,10 +716,10 @@ if enterarena1=="y" or enterarena1=="Y":
                             fmove="0"
                             if "Bomb" in special:
                                 while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                                    fmove=input("K to kick or P to punch or B to use bomb(bombs only do 1000 damage in this battle)")
+                                    fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs only deal 1000 damage in this battle)?')
                             else:
                                 while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                                    fmove=input("K to kick or P to punch")
+                                    fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
                             if fmove=="k" or fmove=="K":
                                 sub=math.floor(random.random()*10)+13
                                 enemyhs+=-sub*damagem*10
@@ -958,6 +958,12 @@ while True:
                     special.append("Bomb")
                     special.append("Bomb")
                     special.append("Bomb")
+                    special.append("Bomb")
+                    special.append("Bomb")
+                    special.append("Bomb")
+                    special.append("Bomb")
+                    special.append("Bomb")
+                    special.append("Bomb")
                 xp+=20
             elif rpath==10:
                 rendscreenx("You get sick and lose a life!")
@@ -1103,10 +1109,10 @@ while True:
             fmove="0"
             if "Bomb" in special:
                 while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                    fmove=input("K to kick or P to punch or B to use bomb(bombs "+bomba+"to the enemy.")
+                    fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs '+ bomba + 'the ememy in this battle)?')
             else:
                 while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                    fmove=input("K to kick or P to punch")
+                    fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
             if fmove=="k" or fmove=="K":
                 sub=math.floor(random.random()*10)+13
                 enemyh+=-sub*damagem*10
@@ -1146,15 +1152,6 @@ while True:
         arenatype=random.randint(1,2)
         #up to ten in later updates
         if arenatype==1:
-            #5 monters
-            #same as origional arena, no XP changes
-            entry=random.randint(20,xp)
-            rendscreenx("You walk up to an arena.  There are five monsters.  Here are the arena rules:")
-            print("You must defeat all 5 enemies.")
-            print("To enter, you must pay " + str(entry) + " gold.")
-            input()
-            rendscreenx("You enter the arena.")
-            gold+=-20
             rendscreen("You choose to enter the arena.")
             input()
             gold+=-20
@@ -1167,10 +1164,10 @@ while True:
                 fmove="0"
                 if "Bomb" in special:
                     while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                        fmove=input("K to kick or P to punch or B to use bomb(bombs only do 1000 damage in this battle)")
+                        fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs only deal 1000 damage in this battle)?')
                 else:
                     while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                        fmove=input("K to kick or P to punch")
+                        fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
                 if fmove=="k" or fmove=="K":
                     sub=math.floor(random.random()*10)+13
                     enemyh+=-sub*damagem*10
@@ -1184,7 +1181,7 @@ while True:
                     input()
                 elif fmove=="B" or fmove=="b":
                     special.remove("Bomb")
-                    enemyh+=-1000*damagem
+                    enemyh=-1
                     input()
                 else:
                     sub=math.floor(random.random()*10)
@@ -1220,10 +1217,10 @@ while True:
                     fmove="0"
                     if "Bomb" in special:
                         while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                            fmove=input("K to kick or P to punch or B to use bomb(bombs only do 1000 damage in this battle)")
+                            fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs only deal 1000 damage in this battle)?')
                     else:
                         while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                            fmove=input("K to kick or P to punch")
+                            fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
                     if fmove=="k" or fmove=="K":
                         sub=math.floor(random.random()*10)+13
                         enemyh+=-sub*damagem*10
@@ -1237,7 +1234,7 @@ while True:
                         input()
                     elif fmove=="B" or fmove=="b":
                         special.remove("Bomb")
-                        enemyh+=-1000*damagem
+                        enemyh=-1
                         input()
                     else:
                         sub=math.floor(random.random()*10)
@@ -1273,10 +1270,10 @@ while True:
                         fmove="0"
                         if "Bomb" in special:
                             while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                                fmove=input("K to kick or P to punch or B to use bomb(bombs only do 1000 damage in this battle)")
+                                fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs only deal 1000 damage in this battle)?')
                         else:
                             while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                                fmove=input("K to kick or P to punch")
+                                fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
                         if fmove=="k" or fmove=="K":
                             sub=math.floor(random.random()*10)+13
                             enemyh+=-sub*damagem*10
@@ -1290,7 +1287,7 @@ while True:
                             input()
                         elif fmove=="B" or fmove=="b":
                             special.remove("Bomb")
-                            enemyh+=-1000*damagem
+                            enemyh=-1000
                             input()
                         else:
                             sub=math.floor(random.random()*10)
@@ -1314,95 +1311,43 @@ while True:
                                 else:
                                     enemyh=-1
                                     exitarena=1
-                    if exitarena!=1:
-                        rendscreen("You beat enemy 3!")
-                        input()
-                        rendscreen("Enemy 4: health: 1500")
-                        health=healthm*1000+ebhealth
-                        enemyh=1500
-                        while enemyh>0:
-                            rendscreenf()
-                            fmove="0"
-                            if "Bomb" in special:
-                                while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                                    fmove=input("K to kick or P to punch or B to use bomb(bombs only do 1000 damage in this battle)")
-                            else:
-                                while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                                    fmove=input("K to kick or P to punch")
-                            if fmove=="k" or fmove=="K":
-                                sub=math.floor(random.random()*10)+13
-                                enemyh+=-sub*damagem*10
-                                print("Damage dealt: "+ str(sub*damagem*10))
-                                input()
-                            elif fmove=="adminpass":
-                                enemyh=0
-                                input()
-                            elif fmove=="l":
-                                health=-1
-                                input()
-                            elif fmove=="B" or fmove=="b":
-                                special.remove("Bomb")
-                                enemyh+=-1000*damagem
-                                input()
-                            else:
-                                sub=math.floor(random.random()*10)
-                                enemyh+=-sub*3.1*damagem*10
-                                print("Damage dealt: "+ str(sub*3.1*damagem*10))
-                                input()
-                            rendscreenf()
-                            if enemyh>0:
-                                sub=math.floor(random.random()*100)
-                                health+=-40
-                                print("Monster attacks!  Damage dealt: "+ str(sub+40))
-                                input()
-                            if health<0:
-                                youlose=0
-                                print("You lost!  You can pay 300 gold to try this arena again(A), or you can just lose(L).")
-                                while youlose!="A" or youlose!="a" or youlose!="L" or youlose!="l":
-                                    youlose=input()
-                                if youlose=="A" or youlose=="a":
-                                    gold+=-300
-                                    health=healthm*1000+ebhealth
-                                else:
-                                    enemyh=-1
-                                    exitarena=1
                         if exitarena!=1:
-                            rendscreen("You beat enemy 4")
-                            input("Final enemy: health: secret")
+                            rendscreen("You beat enemy 3!")
+                            input()
+                            rendscreen("Enemy 4: health: 1500")
                             health=healthm*1000+ebhealth
-                            enemyhs=2000
-                            enemyh="Secret"
-                            while enemyhs>0:
+                            enemyh=1500
+                            while enemyh>0:
                                 rendscreenf()
                                 fmove="0"
                                 if "Bomb" in special:
                                     while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                                        fmove=input("K to kick or P to punch or B to use bomb(bombs only do 1000 damage in this battle)")
+                                        fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs only deal 1000 damage in this battle)?')
                                 else:
                                     while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                                        fmove=input("K to kick or P to punch")
+                                        fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
                                 if fmove=="k" or fmove=="K":
                                     sub=math.floor(random.random()*10)+13
-                                    enemyhs+=-sub*damagem*10
+                                    enemyh+=-sub*damagem*10
                                     print("Damage dealt: "+ str(sub*damagem*10))
                                     input()
                                 elif fmove=="adminpass":
-                                    enemyhs=0
+                                    enemyh=0
                                     input()
                                 elif fmove=="l":
                                     health=-1
                                     input()
                                 elif fmove=="B" or fmove=="b":
                                     special.remove("Bomb")
-                                    enemyhs+=-1000*damagem
+                                    enemyh=-1
                                     input()
                                 else:
                                     sub=math.floor(random.random()*10)
-                                    enemyhs+=-sub*3.1*damagem*10
+                                    enemyh+=-sub*3.1*damagem*10
                                     print("Damage dealt: "+ str(sub*3.1*damagem*10))
                                     input()
-                                    rendscreenf()
-                                if enemyhs>0:
+                                rendscreenf()
+                                if enemyh>0:
                                     sub=math.floor(random.random()*100)
                                     health+=-40
                                     print("Monster attacks!  Damage dealt: "+ str(sub+40))
@@ -1416,9 +1361,61 @@ while True:
                                         gold+=-300
                                         health=healthm*1000+ebhealth
                                     else:
-                                        enemyhs=-1
                                         enemyh=-1
                                         exitarena=1
+                            if exitarena!=1:
+                                rendscreen("You beat enemy 4")
+                                input("Final enemy: health: secret")
+                                health=healthm*1000+ebhealth
+                                enemyhs=2000
+                                enemyh="Secret"
+                                while enemyhs>0:
+                                    rendscreenf()
+                                    fmove="0"
+                                    if "Bomb" in special:
+                                        while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
+                                            fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs only deal 1000 damage in this battle)?')
+                                    else:
+                                        while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
+                                            fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
+                                    if fmove=="k" or fmove=="K":
+                                        sub=math.floor(random.random()*10)+13
+                                        enemyhs+=-sub*damagem*10
+                                        print("Damage dealt: "+ str(sub*damagem*10))
+                                        input()
+                                    elif fmove=="adminpass":
+                                        enemyhs=0
+                                        input()
+                                    elif fmove=="l":
+                                        health=-1
+                                        input()
+                                    elif fmove=="B" or fmove=="b":
+                                        special.remove("Bomb")
+                                        enemyhs=enemyhs-500
+                                        input()
+                                    else:
+                                        sub=math.floor(random.random()*10)
+                                        enemyhs+=-sub*3.1*damagem*10
+                                        print("Damage dealt: "+ str(sub*3.1*damagem*10))
+                                        input()
+                                    rendscreenf()
+                                    if enemyhs>0:
+                                        sub=math.floor(random.random()*100)
+                                        health+=-40
+                                        print("Monster attacks!  Damage dealt: "+ str(sub+40))
+                                        input()
+                                    if health<0:
+                                        youlose=0
+                                        print("You lost!  You can pay 300 gold to try this arena again(A), or you can just lose(L).")
+                                        while youlose!="A" or youlose!="a" or youlose!="L" or youlose!="l":
+                                            youlose=input()
+                                        if youlose=="A" or youlose=="a":
+                                            gold+=-300
+                                            health=healthm*1000+ebhealth
+                                        else:
+                                            enemyhs=-1
+                                            enemyh=-1
+                                            exitarena=1
                                 if exitarena!=1:
                                     enemyh=-1
                                     rendscreen("You beat all the enemies!")
@@ -1463,10 +1460,10 @@ while True:
                 fmove="0"
                 if "Bomb" in special:
                     while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                        fmove=input("K to kick or P to punch or B to use bomb(bombs only do 500 damage in this battle)")
+                        fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs only deal 500 damage in this battle)?')
                 else:
                     while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                        fmove=input("K to kick or P to punch")
+                        fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
                 if fmove=="k" or fmove=="K":
                     sub=math.floor(random.random()*10)+13
                     enemyh+=-sub*damagem*10
@@ -1514,10 +1511,10 @@ while True:
                     fmove="0"
                     if "Bomb" in special:
                         while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                            fmove=input("K to kick or P to punch or B to use bomb(bombs only do 500 damage in this battle)")
+                            fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs only deal 500 damage in this battle)?')
                     else:
                         while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                            fmove=input("K to kick or P to punch")
+                            fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
                     if fmove=="k" or fmove=="K":
                         sub=math.floor(random.random()*10)+13
                         enemyh+=-sub*damagem*10
@@ -1565,10 +1562,10 @@ while True:
                         fmove="0"
                         if "Bomb" in special:
                             while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                                fmove=input("K to kick or P to punch or B to use bomb(bombs only do 500 damage in this battle)")
+                                fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs only deal 500 damage in this battle)?')
                         else:
                             while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                                fmove=input("K to kick or P to punch")
+                                fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
                         if fmove=="k" or fmove=="K":
                             sub=math.floor(random.random()*10)+13
                             enemyh+=-sub*damagem*10
@@ -1658,10 +1655,10 @@ while True:
                     fmove="0"
                     if "Bomb" in special:
                         while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                            fmove=input("K to kick or P to punch or B to use bomb(bombs "+bomba+"to the enemy.")
+                            fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs '+ bomba + 'the ememy in this battle)?')
                     else:
                         while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                            fmove=input("K to kick or P to punch")
+                            fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
                     if fmove=="k" or fmove=="K":
                         sub=math.floor(random.random()*10)+13
                         enemyh+=-sub*damagem*10
@@ -1712,10 +1709,10 @@ while True:
                     fmove="0"
                     if "Bomb" in special:
                         while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                            fmove=input("K to kick or P to punch or B to use bomb(bombs "+bomba+"to the enemy.")
+                            fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs '+ bomba + 'the ememy in this battle)?')
                     else:
                         while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                            fmove=input("K to kick or P to punch")
+                            fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
                     if fmove=="k" or fmove=="K":
                         sub=math.floor(random.random()*10)+13
                         enemyh+=-sub*damagem*10
@@ -1766,10 +1763,10 @@ while True:
                     fmove="0"
                     if "Bomb" in special:
                         while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                            fmove=input("K to kick or P to punch or B to use bomb(bombs "+bomba+"to the enemy.")
+                            fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs '+ bomba + 'the ememy in this battle)?')
                     else:
                         while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                            fmove=input("K to kick or P to punch")
+                            fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
                     if fmove=="k" or fmove=="K":
                         sub=math.floor(random.random()*10)+13
                         enemyh+=-sub*damagem*10
@@ -1820,10 +1817,10 @@ while True:
                     fmove="0"
                     if "Bomb" in special:
                         while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                            fmove=input("K to kick or P to punch or B to use bomb(bombs "+bomba+"to the enemy.")
+                            fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs '+ bomba + 'the ememy in this battle)?')
                     else:
                         while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                            fmove=input("K to kick or P to punch")
+                            fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
                     if fmove=="k" or fmove=="K":
                         sub=math.floor(random.random()*10)+13
                         enemyh+=-sub*damagem*10
@@ -1871,10 +1868,10 @@ while True:
                 fmove="0"
                 if "Bomb" in special:
                     while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                        fmove=input("K to kick or P to punch or B to use bomb(bombs "+bomba+"to the enemy.")
+                        fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs '+ bomba + 'the ememy in this battle)?')
                 else:
                     while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                        fmove=input("K to kick or P to punch")
+                        fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
                 if fmove=="k" or fmove=="K":
                     sub=math.floor(random.random()*10)+13
                     enemyh+=-sub*damagem*10
@@ -2088,10 +2085,10 @@ while True:
                 fmove="0"
                 if "Bomb" in special:
                     while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass" and fmove!="B" and fmove!="b":
-                        fmove=input("K to kick or P to punch or B to use bomb(bombs "+bomba+"to the enemy.")
+                        fmove=menu([['Kick','K'],['Punch','P'],['Bomb','B']],'0','Kick or Punch or use Bomb(bombs '+ bomba + 'the ememy in this battle)?')
                 else:
                     while fmove!="l" and fmove!="k" and fmove!="K" and fmove!="p" and fmove!="P" and fmove!="adminpass":
-                        fmove=input("K to kick or P to punch")
+                        fmove=menu([['Kick','K'],['Punch','P']],'0','Kick or Punch?')
                 if fmove=="k" or fmove=="K":
                     sub=math.floor(random.random()*10)+13
                     enemyh+=-sub*damagem*10
