@@ -9,7 +9,6 @@ special=['Glove', 'Fur Coat', 'Spear', 'Bomb', 'Bomb', 'Golden Vest', 'Sword', '
 gold=400
 lives=10
 xp=100
-from commands import *
 import random
 worlds=[["Normal","norm.py"],["Frozen Tundra", "frozen.py"], ["Moon", "moon.py"], ["Minecraft", "blocked.py"]]
 worldn=len(worlds)
@@ -19,4 +18,7 @@ while True:
     cw=random.randint(1,100)
     if cw==1:
         rendscreenx("Changing world...")
+        input()
         worldc=random.randint(0,worldn-1)
+        print("Switching to world " + worlds[worldc][0])
+        input()

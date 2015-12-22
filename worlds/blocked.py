@@ -1,5 +1,5 @@
 #Minecraft
-#another world, in this one you teleport to the moon
+#A world based off minecraft
 import random
 def rendscreenx(text):
     cls()
@@ -17,7 +17,7 @@ def rendscreenf():
     print("--------------------------------------------------------------------------------")
 def cls():
     print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
-mcm=random.randint(1,2)
+mcm=random.randint(1,3)
 if mcm==1:
     if ender==1:
         type=random.randint(1,16)
@@ -166,8 +166,31 @@ if mcm==1:
 elif mcm==2:
     rendscreenx("You find a block!")
     input()
-    blockg=random.randint(1,23)
+    blockg=random.randint(0,22)
     blocks=["Stone", "Grass", "Dirt", "Bedrock", "Sand", "Gravel", "Gold Ore", "Iron Ore", "Coal Ore", "Log", "Leaves", "Lapis Ore", "Sandstone", "Tallgrass", "Deadbush", "Yellow Flower", "Red Flower", "Brown Mushroom", "Red Mushroom", "Diamond Ore", "Redstone Ore", "Emerald Ore", "Packed Ice"]
     special.append(blocks[blockg])
-    rendscreenx("You found a " + blocks[blockg] + "block!")
+    rendscreenx("You found a " + blocks[blockg] + " block!")
+elif mcm==3:
+    #special item
+    item=random.randint(1,4)
+    if item==1:
+        rendscreenx("You found a wood sword!")
+        input()
+        rendscreenx("It grants x1.2 damage in all battles!")
+        damagem=damagem*1.2
+        special.append('Wood sword')
+    elif item==2:
+        rendscreenx("You found an iron sword!")
+        input()
+        rendscreenx("It grants x1.6 damage in all battles!")
+        damagem=damagem*1.6
+        special.append('Iron sword')
+    elif item==3:
+        rendscreenx("You found a gold sword!")
+        input()
+        rendscreenx("It grants double damage in all battles!")
+        damagem=damagem*2
+        special.append("Gold sword")
+        #hello
+    xp+=30
 input()
