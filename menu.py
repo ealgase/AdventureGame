@@ -1,13 +1,4 @@
 #!/bin/python3
-#developed by ealgase
-#menuingin python3
-#MENU LIST:
-#Way this list works:
-#Each menu item is a list:
-#Item 1:
-#Name(what it appears as)
-#Item 2:
-#What it returns when selected
 import sys
 import tty,termios
 class _Getch:
