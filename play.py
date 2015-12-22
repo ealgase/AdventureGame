@@ -6,6 +6,7 @@ healthm=1
 import time
 import random
 import math
+from menu import menu
 def rendscreenx(text):
     cls()
     print("--------------------------------------------------------------------------------")
@@ -805,7 +806,7 @@ while True:
             lpath=random.randint(1,11)
             if lpath==1:
                 goldgotten=math.floor(xp/100)
-                rendscreenx("You found a chest with " + int(goldgotten) + " gold!")
+                rendscreenx("You found a chest with " + str(goldgotten) + " gold!")
                 gold+=goldgotten
                 xp+=1
             elif lpath==2:

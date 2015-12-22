@@ -42,11 +42,10 @@ def get():
 def cls():
     print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 def menu(menulist,select,prompt):
-    selected=select
+    selected=int(select)
     enter=False
     menul=len(menulist)
     while enter==False:
-        cls()
         print(prompt)
         print('-')
         for menur in range(menul):
@@ -63,5 +62,6 @@ def menu(menulist,select,prompt):
                 selected+=1
         elif move=="return":
             enter=True
+    cls()
     ret=menulist[selected][1]
     return ret
