@@ -34,12 +34,11 @@ elif tut=='s':
     pass
 else:
     exit()
-'''
 worlds=[["Normal","norm.py"],["Frozen Tundra", "frozen.py"], ["Moon", "moon.py"], ["Minecraft", "blocked.py"]]
 worldn=len(worlds)
 worldc=random.randint(0,worldn-1)
 while True:
-    exec(open(worlds[worldc][1]).read())
+    execfile('./world/'+ worlds[worldc][1])
     cw=random.randint(1,100)
     if cw==1:
         rendscreenx("Changing world...")
@@ -47,4 +46,3 @@ while True:
         worldc=random.randint(0,worldn-1)
         print("Switching to world " + worlds[worldc][0])
         input()
-'''

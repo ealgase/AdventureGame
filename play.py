@@ -1,4 +1,5 @@
 lives=5
+#
 gold=10
 damagem=1
 special=[]
