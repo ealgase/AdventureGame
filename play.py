@@ -50,7 +50,7 @@ rdone=0
 ldone=0
 while move!="L" and move!="l" and move!="R" and move!="R" and move!="s" and move!="S":
     rendscreen("You are walking in a forest.  You come to a part you don't know. You go ahead.")
-    move=input("Do you go left(L), right(R) or straight(S)")
+    move=menu([["Left","L"],["Right","R"],["Straight","S"]],0,"Which way do you go?")
     if move=="L" or move=="l":
         if ldone==1:
             rendscreen("You've already gone here!")
@@ -1144,6 +1144,7 @@ while True:
                 youlose=0
                 print("You lost a life!")
                 lives+=-1
+                health=healthm*1000+ebhealth
         rendscreenx("You beat the "+enemy+"!")
         xp+=xpe
         input()
@@ -1153,6 +1154,7 @@ while True:
         arenatype=random.randint(1,2)
         #up to ten in later updates
         if arenatype==1:
+            entry=randint(1,500)
             rendscreen("You choose to enter the arena.")
             input()
             gold+=-20

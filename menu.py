@@ -54,6 +54,7 @@ def menu(menulist,select,prompt):
             else:
                 print(menulist[menur][0])
         move=get()
+        cls()
         if move=="up":
             if selected<len(menulist) and selected>0:
                 selected+=-1
