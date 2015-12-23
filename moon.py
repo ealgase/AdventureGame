@@ -1,34 +1,6 @@
-if __name__!="__main__":
-    special=['Glove', 'Fur Coat', 'Spear', 'Bomb', 'Bomb', 'Golden Vest', 'Sword', 'Bomb', 'Bomb', 'Bomb', 'Bomb', 'Bomb', 'Staff']
-    lives=13
-    gold=560
-    ebhealth=250
-    damagem=8
-    healthm=4
-    ender=0
-    moonmon=0
-    mars=0
-    xp=100
 #Moon
 #another world, in this one you teleport to the moon
-import random
-def rendscreenx(text):
-    cls()
-    print("--------------------------------------------------------------------------------")
-    print("Gold: "+ str(gold) + " Lives: " + str(lives) + " XP: "+ str(xp))
-    print("Special items: "+str(special))
-    print("--------------------------------------------------------------------------------")
-    print(text)
-def rendscreenf():
-    cls()
-    print("--------------------------------------------------------------------------------")
-    print("Gold: "+ str(gold) + " Lives: " + str(lives))
-    print("Special items: "+str(special))
-    print("Health: "+str(health)+" Enemy Health: "+str(enemyh))
-    print("--------------------------------------------------------------------------------")
-def cls():
-    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
-if __name__ == "__main__":
+def moon():
     moonm=random.randint(1,3)
     if moonm==1:
         rendscreenx("You walk around on the moon.")
