@@ -1,3 +1,13 @@
+lives=5
+gold=10
+xp=100
+damagem=1
+special=[]
+healthm=1
+import time
+import random
+import math
+from menu import menu
 def cls():
     print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 def rendscreenx(text):
@@ -16,12 +26,8 @@ def rendscreenf():
     print("--------------------------------------------------------------------------------")
 def rendscreen(text):
     cls()
-    xp=0
-    lives=0
-    gold=0
-    special=[]
     print("--------------------------------------------------------------------------------")
-    print("Gold: "+ str(gold) + " Lives: " + str(lives))
+    print("Gold: "+ str(gold) + " Lives: " + str(lives) + " XP: "+ str(xp))
     print("Special items: "+str(special))
     print("--------------------------------------------------------------------------------")
     print(text)
@@ -51,9 +57,6 @@ move="None"
 rdone=0
 ldone=0
 while move!="L" and move!="l" and move!="R" and move!="R" and move!="s" and move!="S":
-    gold=10
-    lives=5
-    xp=100
     rendscreen("You are walking in a forest.  You come to a part you don't know. You go ahead.")
     move=menu([["Left","L"],["Right","R"],["Straight","S"]],0,"Which way do you go?")
     if move=="L" or move=="l":
@@ -791,7 +794,7 @@ if enterarena1=="y" or enterarena1=="Y" and exitarena==0:
     input()
 rendscreen("You continue on the path.")
 input()
-rendscreen("Now, you've beaten the tutorial.  Keep playing against harder enemies and getting better.")
+rendscreen("Now, you've beaten the tutorial.")
 xp=100
 mars=0
 special=['Glove', 'Fur Coat', 'Spear', 'Bomb', 'Bomb', 'Golden Vest', 'Sword', 'Bomb', 'Bomb', 'Bomb', 'Bomb', 'Bomb', 'Staff']

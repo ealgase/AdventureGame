@@ -15,7 +15,7 @@
 from time import *
 from os import *
 from menu import *
-from random import *
+import random
 from commands import *
 from rend import *
 ####Vars
@@ -29,16 +29,22 @@ ender=0
 moonmon=0
 tut=menu([['Play Tutorial','t'],['Start playing','s'],['Exit','e']],1,'What do you want to do?')
 if tut=='t':
+    from tutorial import *
     execfile('tutorial.py')
+    pass
 elif tut=='s':
     pass
 else:
     exit()
+from norm import *
+from frozen import *
+from moon import *
+from blocked import *
 worlds=[["Normal","norm.py"],["Frozen Tundra", "frozen.py"], ["Moon", "moon.py"], ["Minecraft", "blocked.py"]]
 worldn=len(worlds)
 worldc=random.randint(0,worldn-1)
 while True:
-    execfile('./world/'+ worlds[worldc][1])
+    execfile(worlds[worldc][1])
     cw=random.randint(1,100)
     if cw==1:
         rendscreenx("Changing world...")
