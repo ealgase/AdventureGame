@@ -18,7 +18,18 @@ from menu import *
 import random
 from commands import *
 from rend import *
+from vfg import *
 ####Vars
+global special
+global lives
+global gold
+global ebhealth
+global damagem
+global healthm
+global ender
+global moonmon
+global mars
+global xp
 special=['Glove', 'Fur Coat', 'Spear', 'Bomb', 'Bomb', 'Golden Vest', 'Sword', 'Bomb', 'Bomb', 'Bomb', 'Bomb', 'Bomb', 'Staff']
 lives=13
 gold=560
@@ -27,10 +38,11 @@ damagem=8
 healthm=4
 ender=0
 moonmon=0
+mars=0
+xp=100
 tut=menu([['Play Tutorial','t'],['Start playing','s'],['Exit','e']],1,'What do you want to do?')
 if tut=='t':
-    from tutorial import *
-    execfile('tutorial.py')
+    import tutorial
     pass
 elif tut=='s':
     pass
@@ -40,11 +52,11 @@ from norm import *
 from frozen import *
 from moon import *
 from blocked import *
-worlds=[["Normal","norm.py"],["Frozen Tundra", "frozen.py"], ["Moon", "moon.py"], ["Minecraft", "blocked.py"]]
+worlds=[["Normal","norm.py","normal"],["Frozen Tundra", "frozen.py","frozen"], ["Moon", "moon.py","moon"], ["Minecraft", "blocked.py","blocked"]]
 worldn=len(worlds)
 worldc=random.randint(0,worldn-1)
 while True:
-    execfile(worlds[worldc][1])
+    exec(str(worlds[worldc][2])+'()')
     cw=random.randint(1,100)
     if cw==1:
         rendscreenx("Changing world...")

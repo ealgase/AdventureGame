@@ -1,5 +1,10 @@
 #Minecraft
 #A world based off minecraft
+from menu import *
+import random,time
+from commands import *
+from rend import *
+from vfg import *
 def blocked():
     mcm=random.randint(1,3)
     if mcm==1:

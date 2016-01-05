@@ -1,3 +1,7 @@
+from menu import *
+import random,time
+from commands import *
+from rend import *
 def normal():
     move=random.randint(1,9)
     #move=random.randint(1,9)

@@ -1,5 +1,20 @@
+special=['Glove', 'Fur Coat', 'Spear', 'Bomb', 'Bomb', 'Golden Vest', 'Sword', 'Bomb', 'Bomb', 'Bomb', 'Bomb', 'Bomb', 'Staff']
+lives=13
+gold=560
+ebhealth=250
+damagem=8
+healthm=4
+ender=0
+moonmon=0
+mars=0
+xp=100
 #Moon
 #another world, in this one you teleport to the moon
+from menu import *
+import random,time
+from commands import *
+from rend import *
+from vfg import *
 def moon():
     moonm=random.randint(1,3)
     if moonm==1:
